@@ -1,0 +1,1868 @@
+{
+  "branches": [
+    {
+      "id": 1,
+      "name": "Flowers",
+      "address": "Академка Сахарова 105",
+      "phone": "+7 987 654 32 10",
+      "categories": [
+        {
+          "name": "Шашлык",
+          "logo": "assets/Шашлык/logo.png",
+          "products": [
+            {
+              "name": "Шейка Свинина",
+              "image": "Шашлык/DSC08896.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "760руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1900руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Свиные рёбрышки",
+              "image": "Шашлык/DSC08890.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "680руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1700руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Вырезка Свинина",
+              "image": "Шашлык/DSC08884.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "800руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "2000руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Вырезка телятина",
+              "image": "Шашлык/DSC08874.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "1360руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "3400руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Свинина корейка",
+              "image": "Шашлык/DSC08887.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "640руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1600руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Телятина на кости",
+              "image": "Шашлык/DSC08879.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "1000руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "2500руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Голень куриная",
+              "image": "Шашлык/DSC08911.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "520руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1300руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Каре Баранина",
+              "image": "Шашлык/DSC08930.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "1120руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "2880руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Баранины Мякоть",
+              "image": "Шашлык/DSC08874.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "1200руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "3000руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Куриное филе",
+              "image": "Шашлык/DSC08901.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "600руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1600руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Грибы шампиньоны",
+              "image": "Шашлык/DSC08970.webp",
+              "options": [
+                {
+                  "name": "200 гр",
+                  "price": "300руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1500руб"
+                }
+              ],
+              "description": "200 гр"
+            },
+            {
+              "name": "Шашлык из печени телятины",
+              "image": "Шашлык/DSC00002.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "560руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1400руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Куриные крылья",
+              "image": "Шашлык/DSC08923.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "560руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1400руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Люля-кебаб (свинина+говядина)",
+              "image": "Шашлык/DSC08938.webp",
+              "price": "270руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Люля-кебаб курица",
+              "image": "Шашлык/DSC08936.webp",
+              "price": "270руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Люля-кебаб из баранины",
+              "image": "Шашлык/DSC08938.webp",
+              "price": "320руб",
+              "description": "170 гр"
+            },
+            {
+              "name": "Сердечки куриные",
+              "image": "Шашлык/DSC08939.webp",
+              "price": "280руб",
+              "description": "1 порция"
+            },
+            {
+              "name": "Цукини",
+              "image": "Шашлык/DSC08955.webp",
+              "price": "200руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Баклажан",
+              "image": "Шашлык/DSC08958.webp",
+              "price": "200руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Картофель на мангале (одна порция)",
+              "image": "Шашлык/DSC08968.webp",
+              "price": "120руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Овощной шашлык",
+              "image": "Шашлык/DSC08959.webp",
+              "price": "400руб",
+              "description": "400 гр"
+            },
+            {
+              "name": "Овощной гриль",
+              "image": "Шашлык/DSC08965.webp",
+              "price": "400руб",
+              "description": "400 гр"
+            },
+            {
+              "name": "Курица гриль",
+              "image": "Шашлык/DSC09000.webp",
+              "price": "700руб",
+              "description": "1 кг"
+            },
+            {
+              "name": "Цыпленок 600гр + картофель 150гр (порция)",
+              "image": "Шашлык/DSC00001.webp",
+              "price": "800руб",
+              "description": "600 гр + 150 гр"
+            },
+            {
+              "name": "Соус шашлычный",
+              "image": "Шашлык/DSC09090.webp",
+              "price": "70руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Соус чесночный",
+              "image": "Шашлык/DSC09094.webp",
+              "price": "70руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Аджика",
+              "image": "Шашлык/DSC09091.webp",
+              "price": "70руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Наршараб",
+              "image": "Шашлык/DSC09092.webp",
+              "price": "80руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Лаваш тонкий",
+              "image": "Шашлык/DSC09025.webp",
+              "price": "50руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Лепёшка",
+              "image": "Шашлык/DSC09028.webp",
+              "price": "60руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Соус Heinz",
+              "image": "Шашлык/DSC09089.webp",
+              "price": "70руб",
+              "description": "1 шт"
+            }
+          ],
+          "logo": "assets/Шашлык/logo.png"
+        },
+        {
+          "name": "Рыба_на_мангале",
+          "logo": "assets/Рыба_на_мангале/logo.png",
+          "products": [
+            {
+              "name": "Стейк сёмги",
+              "image": "Рыба_на_мангале/DSC08948.webp",
+              "options": [
+                {
+                  "name": "200 гр",
+                  "price": "720руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "3600руб"
+                }
+              ],
+              "description": "200 гр"
+            },
+            {
+              "name": "Осетрина на мангале",
+              "image": "Рыба_на_мангале/DSC00003.webp",
+              "options": [
+                {
+                  "name": "200 гр",
+                  "price": "1200руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "6000руб"
+                }
+              ],
+              "description": "200 гр"
+            },
+            {
+              "name": "Форель радужная (500–600 гр)",
+              "image": "Рыба_на_мангале/DSC08944.webp",
+              "options": [
+                {
+                  "name": "200 гр",
+                  "price": "1200руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "6000руб"
+                }
+              ],
+              "description": "200 гр"
+            },
+            {
+              "name": "Сибас (250–300 гр)",
+              "image": "Рыба_на_мангале/DSC08951.webp",
+              "price": "250руб",
+              "description": "100 гр"
+            },
+            {
+              "name": "Дорадо (300–400 гр)",
+              "image": "Рыба_на_мангале/DSC00005.webp",
+              "price": "250руб",
+              "description": "100 гр"
+            },
+            {
+              "name": "Стейк зубатки (250–300 гр)",
+              "image": "Рыба_на_мангале/DSC00004.webp",
+              "price": "180руб",
+              "description": "100 гр"
+            }
+          ],
+          "logo": "assets/Рыба_на_мангале/logo.png"
+        },
+        {
+          "name": "Шаурма",
+          "logo": "assets/Шаурма/logo.png",
+          "products": [
+            {
+              "name": "Шаурма со свининой",
+              "image": "Шаурма/DSC09005.webp",
+              "price": "280руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар со свининой",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "290руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шаурма с курицей",
+              "image": "Шаурма/DSC09005.webp",
+              "price": "280руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар с курицей",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "290руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шаурма с люля-кебаб",
+              "image": "Шаурма/DSC09016.webp",
+              "price": "310руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар с люля-кебаб",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "320руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шаурма с люля-кебаб из баранины",
+              "image": "Шаурма/DSC09016.webp",
+              "price": "380руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар с люля-кебаб из баранины",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "390руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шаурма с грибами",
+              "image": "Шаурма/DSC09005.webp",
+              "price": "280руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар с грибами",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "290руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шаурма Цезарь",
+              "image": "Шаурма/DSC09005.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар Цезарь",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "310руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шаурма Жульен",
+              "image": "Шаурма/DSC09005.webp",
+              "price": "320руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар Жульен",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "330руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шаурма с овощами",
+              "image": "Шаурма/DSC09005.webp",
+              "price": "210руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар с овощами",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "220руб",
+              "description": "1 шт"
+            }
+          ],
+          "logo": "assets/Шаурма/logo.png"
+        },
+        {
+          "name": "Сувлаки",
+          "logo": "assets/Сувлаки/logo.png",
+          "products": [
+            {
+              "name": "Сувлаки Люля-кебаб",
+              "image": "Сувлаки/DSC09030.webp",
+              "price": "330руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Сувлаки Люля-кебаб из баранины",
+              "image": "Сувлаки/DSC09030.webp",
+              "price": "400руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Сувлаки Свинина",
+              "image": "Сувлаки/DSC09030.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Сувлаки Курица",
+              "image": "Сувлаки/DSC09030.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            }
+          ],
+          "logo": "assets/Сувлаки/logo.png"
+        },
+        {
+          "name": "Бургеры",
+          "logo": "assets/Бургеры/logo.png",
+          "products": [
+            {
+              "name": "Бургер с говядиной",
+              "image": "Бургеры/DSC09012.webp",
+              "price": "370руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Бургер с говядиной и свининой",
+              "image": "Бургеры/DSC09012.webp",
+              "price": "350руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Бургер с курицей",
+              "image": "Бургеры/DSC09012.webp",
+              "price": "320руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Хот дог",
+              "image": "Бургеры/DSC09010.webp",
+              "price": "120руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Самса Баранина",
+              "image": "Бургеры/DSC09008.webp",
+              "price": "140руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Самса Курица",
+              "image": "Бургеры/DSC09008.webp",
+              "price": "120руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Самса Говядина",
+              "image": "Бургеры/DSC09008.webp",
+              "price": "130руб",
+              "description": "1 шт"
+            }
+          ],
+          "logo": "assets/Бургеры/logo.png"
+        },
+        {
+          "name": "Хинкали_и_хачапури",
+          "logo": "assets/Хинкали_и_хачапури/logo.png",
+          "products": [
+            {
+              "name": "Хинкали (говядина и свинина)",
+              "image": "hinkali_govyadina_svinina.jpg",
+              "price": "400руб",
+              "description": "5 шт"
+            },
+            {
+              "name": "Хинкали (баранина и говядина)",
+              "image": "hinkali_baranina_govyadina.jpg",
+              "price": "440руб",
+              "description": "5 шт"
+            },
+            {
+              "name": "Квари (вареник с сулугуни)",
+              "image": "kvari_suluguni.jpg",
+              "price": "370руб",
+              "description": "4 шт"
+            },
+            {
+              "name": "Хачапури по-аджарски",
+              "image": "khachapuri_po_adzharski.jpg",
+              "price": "480руб",
+              "description": "300 гр"
+            },
+            {
+              "name": "Хачапури по-мегрельски",
+              "image": "khachapuri_po_megrelsky.jpg",
+              "price": "520руб",
+              "description": "550 гр"
+            }
+          ],
+          "logo": "assets/Хинкали_и_хачапури/logo.png"
+        },
+        {
+          "name": "Лапша",
+          "logo": "assets/Лапша/logo.png",
+          "products": [
+            {
+              "name": "Лапша с креветкой",
+              "image": "Лапша/DSC08977.webp",
+              "price": "380руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Лапша с морепродуктами",
+              "image": "Лапша/DSC09024.webp",
+              "price": "350руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Лапша с курицей",
+              "image": "Лапша/DSC09024.webp",
+              "price": "330руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Лапша со свининой",
+              "image": "Лапша/DSC09024.webp",
+              "price": "330руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Лапша с овощами",
+              "image": "Лапша/DSC09024.webp",
+              "price": "280руб",
+              "description": "1 шт"
+            }
+          ],
+          "logo": "assets/Лапша/logo.png"
+        },
+        {
+          "name": "Супы",
+          "logo": "assets/Супы/logo.png",
+          "products": [
+            {
+              "name": "Солянка",
+              "image": "Супы/DSC08985.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Лагман",
+              "image": "Супы/DSC08983.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Борщ",
+              "image": "Супы/DSC08987.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Окрошка",
+              "image": "okroshka.jpg",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Гороховый",
+              "image": "Супы/DSC08989.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Пельмени (15 шт)",
+              "image": "Супы/DSC08992.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Харчо",
+              "image": "Супы/DSC08980.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шурпа",
+              "image": "Супы/DSC08983.webp",
+              "price": "320руб",
+              "description": "1 шт"
+            }
+          ],
+          "logo": "assets/Супы/logo.png"
+        },
+        {
+          "name": "Салаты",
+          "logo": "assets/Салаты/logo.png",
+          "products": [
+            {
+              "name": "Цезарь",
+              "image": "Салаты/DSC08975.webp",
+              "price": "250руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Оливье",
+              "image": "Салаты/DSC08974.webp",
+              "price": "220руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Салат Свекольный",
+              "image": "Салаты/DSC08972.webp",
+              "price": "200руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Салат огурцы, помидоры",
+              "image": "Салаты/DSC09038.webp",
+              "price": "300руб",
+              "description": "300 гр"
+            },
+            {
+              "name": "Морковь по-корейски",
+              "image": "Салаты/DSC08993.webp",
+              "price": "170руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Греческий",
+              "image": "grecheskii.jpg",
+              "price": "350руб",
+              "description": "300 гр"
+            }
+          ],
+          "logo": "assets/Салаты/logo.png"
+        },
+        {
+          "name": "Снеки",
+          "logo": "assets/Снеки/logo.png",
+          "products": [
+            {
+              "name": "Наггетсы",
+              "image": "Снеки/DSC09018.webp",
+              "price": "200руб",
+              "description": "8 шт"
+            },
+            {
+              "name": "Палочки (сырные)",
+              "image": "Снеки/DSC09019.webp",
+              "price": "200руб",
+              "description": "8 шт"
+            },
+            {
+              "name": "Картофель фри",
+              "image": "Снеки/DSC09021.webp",
+              "price": "160руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Картофель по-деревенски",
+              "image": "Снеки/DSC09022.webp",
+              "price": "160руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Луковые кольца в панировке",
+              "image": "lukovye_kolca_10.jpg",
+              "price": "160руб",
+              "description": "10 шт"
+            },
+            {
+              "name": "Кольца кальмара в панировке",
+              "image": "kolca_kalmara_4.jpg",
+              "price": "200руб",
+              "description": "4 шт"
+            },
+            {
+              "name": "Креветки в панировке",
+              "image": "krevetki_v_panirovke_6.jpg",
+              "price": "300руб",
+              "description": "6 шт"
+            },
+            {
+              "name": "Соус Heinz",
+              "image": "Снеки/DSC09089.webp",
+              "price": "60руб",
+              "description": "1 шт"
+            }
+          ],
+          "logo": "assets/Снеки/logo.png"
+        },
+        {
+          "name": "Кондитерские_изделия",
+          "logo": "assets/Кондитерские_изделия/logo.png",
+          "products": [
+            {
+              "name": "Пахлава",
+              "image": "Кондитерские_изделия/DSC09057.webp",
+              "price": "100руб",
+              "description": "100 гр"
+            },
+            {
+              "name": "Торт Красный бархат",
+              "image": "Кондитерские_изделия/DSC09045.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Прага",
+              "image": "Кондитерские_изделия/DSC09055.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Керрот кейк",
+              "image": "Кондитерские_изделия/DSC09046.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Чизкейк",
+              "image": "Кондитерские_изделия/DSC09047.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Медовик",
+              "image": "Кондитерские_изделия/DSC09054.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Пончики от Мама Вера",
+              "image": "Кондитерские_изделия/DSC09041.webp",
+              "price": "110руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Малиновая бомба",
+              "image": "Кондитерские_изделия/DSC09056.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Орео",
+              "image": "Кондитерские_изделия/DSC09051.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Баблгам",
+              "image": "Кондитерские_изделия/DSC09049.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Молочная девочка",
+              "image": "molochnaya_devochka_kusok.jpg",
+              "price": "220руб",
+              "description": "1 кусок"
+            }
+          ],
+          "logo": "assets/Кондитерские_изделия/logo.png"
+        },
+        {
+          "name": "Напитки",
+          "logo": "assets/Напитки/logo.png",
+          "products": [
+            {
+              "name": "Морс",
+              "image": "Напитки/DSC09078.webp",
+              "price": "130руб",
+              "description": "500 мл"
+            },
+            {
+              "name": "Бардзими",
+              "image": "Напитки/DSC09067.webp",
+              "price": "130руб",
+              "description": "500 мл"
+            },
+            {
+              "name": "Сок Добрый",
+              "image": "Напитки/DSC09069.webp",
+              "price": "180руб",
+              "description": "1 л"
+            },
+            {
+              "name": "Кока Кола в стекле",
+              "image": "Напитки/DSC09072.webp",
+              "price": "130руб",
+              "description": "0,33 л"
+            },
+            {
+              "name": "Кока Кола",
+              "image": "Напитки/DSC09074.webp",
+              "price": "120руб",
+              "description": "0,5 л"
+            },
+            {
+              "name": "Кока Кола",
+              "image": "Напитки/DSC09071.webp",
+              "price": "180руб",
+              "description": "1 л"
+            },
+            {
+              "name": "Jermuk",
+              "image": "Напитки/DSC09075.webp",
+              "price": "100руб",
+              "description": "500 мл"
+            },
+            {
+              "name": "Аква Кристалл",
+              "image": "Напитки/DSC09066.webp",
+              "price": "130руб",
+              "description": "500 мл"
+            },
+            {
+              "name": "Чай",
+              "image": "chai_200.jpg",
+              "price": "60руб",
+              "description": "200 мл"
+            }
+          ],
+          "logo": "assets/Напитки/logo.png"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Flowers",
+      "address": "Академка Сахарова 105",
+      "phone": "+7 987 654 32 10",
+      "categories": [
+        {
+          "name": "Шашлык",
+          "logo": "assets/Шашлык/logo.png",
+          "products": [
+            {
+              "name": "Шейка Свинина",
+              "image": "Шашлык/DSC08896.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "760руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1900руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Свиные рёбрышки",
+              "image": "Шашлык/DSC08890.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "680руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1700руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Вырезка Свинина",
+              "image": "Шашлык/DSC08884.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "800руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "2000руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Вырезка телятина",
+              "image": "Шашлык/DSC08874.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "1360руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "3400руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Свинина корейка",
+              "image": "Шашлык/DSC08887.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "640руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1600руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Телятина на кости",
+              "image": "Шашлык/DSC08879.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "1000руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "2500руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Голень куриная",
+              "image": "Шашлык/DSC08911.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "520руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1300руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Каре Баранина",
+              "image": "Шашлык/DSC08930.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "1120руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "2880руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Баранины Мякоть",
+              "image": "Шашлык/DSC08874.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "1200руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "3000руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Куриное филе",
+              "image": "Шашлык/DSC08901.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "600руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1600руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Грибы шампиньоны",
+              "image": "Шашлык/DSC08970.webp",
+              "options": [
+                {
+                  "name": "200 гр",
+                  "price": "300руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1500руб"
+                }
+              ],
+              "description": "200 гр"
+            },
+            {
+              "name": "Шашлык из печени телятины",
+              "image": "Шашлык/DSC00002.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "560руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1400руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Куриные крылья",
+              "image": "Шашлык/DSC08923.webp",
+              "options": [
+                {
+                  "name": "400 гр",
+                  "price": "560руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "1400руб"
+                }
+              ],
+              "description": "400 гр"
+            },
+            {
+              "name": "Люля-кебаб (свинина+говядина)",
+              "image": "Шашлык/DSC08938.webp",
+              "price": "270руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Люля-кебаб курица",
+              "image": "Шашлык/DSC08936.webp",
+              "price": "270руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Люля-кебаб из баранины",
+              "image": "Шашлык/DSC08938.webp",
+              "price": "320руб",
+              "description": "170 гр"
+            },
+            {
+              "name": "Сердечки куриные",
+              "image": "Шашлык/DSC08939.webp",
+              "price": "280руб",
+              "description": "1 порция"
+            },
+            {
+              "name": "Цукини",
+              "image": "Шашлык/DSC08955.webp",
+              "price": "200руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Баклажан",
+              "image": "Шашлык/DSC08958.webp",
+              "price": "200руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Картофель на мангале (одна порция)",
+              "image": "Шашлык/DSC08968.webp",
+              "price": "120руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Овощной шашлык",
+              "image": "Шашлык/DSC08959.webp",
+              "price": "400руб",
+              "description": "400 гр"
+            },
+            {
+              "name": "Овощной гриль",
+              "image": "Шашлык/DSC08965.webp",
+              "price": "400руб",
+              "description": "400 гр"
+            },
+            {
+              "name": "Курица гриль",
+              "image": "Шашлык/DSC09000.webp",
+              "price": "700руб",
+              "description": "1 кг"
+            },
+            {
+              "name": "Цыпленок 600гр + картофель 150гр (порция)",
+              "image": "Шашлык/DSC00001.webp",
+              "price": "800руб",
+              "description": "600 гр + 150 гр"
+            },
+            {
+              "name": "Соус шашлычный",
+              "image": "Шашлык/DSC09090.webp",
+              "price": "70руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Соус чесночный",
+              "image": "Шашлык/DSC09094.webp",
+              "price": "70руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Аджика",
+              "image": "Шашлык/DSC09091.webp",
+              "price": "70руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Наршараб",
+              "image": "Шашлык/DSC09092.webp",
+              "price": "80руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Лаваш тонкий",
+              "image": "Шашлык/DSC09025.webp",
+              "price": "50руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Лепёшка",
+              "image": "Шашлык/DSC09028.webp",
+              "price": "60руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Соус Heinz",
+              "image": "Шашлык/DSC09089.webp",
+              "price": "70руб",
+              "description": "1 шт"
+            }
+          ],
+          "logo": "assets/Шашлык/logo.png"
+        },
+        {
+          "name": "Рыба_на_мангале",
+          "logo": "assets/Рыба_на_мангале/logo.png",
+          "products": [
+            {
+              "name": "Стейк сёмги",
+              "image": "Рыба_на_мангале/DSC08948.webp",
+              "options": [
+                {
+                  "name": "200 гр",
+                  "price": "720руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "3600руб"
+                }
+              ],
+              "description": "200 гр"
+            },
+            {
+              "name": "Осетрина на мангале",
+              "image": "Рыба_на_мангале/DSC00003.webp",
+              "options": [
+                {
+                  "name": "200 гр",
+                  "price": "1200руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "6000руб"
+                }
+              ],
+              "description": "200 гр"
+            },
+            {
+              "name": "Форель радужная (500–600 гр)",
+              "image": "Рыба_на_мангале/DSC08944.webp",
+              "options": [
+                {
+                  "name": "200 гр",
+                  "price": "1200руб"
+                },
+                {
+                  "name": "1 кг",
+                  "price": "6000руб"
+                }
+              ],
+              "description": "200 гр"
+            },
+            {
+              "name": "Сибас (250–300 гр)",
+              "image": "Рыба_на_мангале/DSC08951.webp",
+              "price": "250руб",
+              "description": "100 гр"
+            },
+            {
+              "name": "Дорадо (300–400 гр)",
+              "image": "Рыба_на_мангале/DSC00005.webp",
+              "price": "250руб",
+              "description": "100 гр"
+            },
+            {
+              "name": "Стейк зубатки (250–300 гр)",
+              "image": "Рыба_на_мангале/DSC00004.webp",
+              "price": "180руб",
+              "description": "100 гр"
+            }
+          ],
+          "logo": "assets/Рыба_на_мангале/logo.png"
+        },
+        {
+          "name": "Шаурма",
+          "logo": "assets/Шаурма/logo.png",
+          "products": [
+            {
+              "name": "Шаурма со свининой",
+              "image": "Шаурма/DSC09005.webp",
+              "price": "280руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар со свининой",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "290руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шаурма с курицей",
+              "image": "Шаурма/DSC09005.webp",
+              "price": "280руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар с курицей",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "290руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шаурма с люля-кебаб",
+              "image": "Шаурма/DSC09016.webp",
+              "price": "310руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар с люля-кебаб",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "320руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шаурма с люля-кебаб из баранины",
+              "image": "Шаурма/DSC09016.webp",
+              "price": "380руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар с люля-кебаб из баранины",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "390руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шаурма с грибами",
+              "image": "Шаурма/DSC09005.webp",
+              "price": "280руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар с грибами",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "290руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шаурма Цезарь",
+              "image": "Шаурма/DSC09005.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар Цезарь",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "310руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шаурма Жульен",
+              "image": "Шаурма/DSC09005.webp",
+              "price": "320руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар Жульен",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "330руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шаурма с овощами",
+              "image": "Шаурма/DSC09005.webp",
+              "price": "210руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Донар с овощами",
+              "image": "Шаурма/DSC08998.webp",
+              "price": "220руб",
+              "description": "1 шт"
+            }
+          ],
+          "logo": "assets/Шаурма/logo.png"
+        },
+        {
+          "name": "Сувлаки",
+          "logo": "assets/Сувлаки/logo.png",
+          "products": [
+            {
+              "name": "Сувлаки Люля-кебаб",
+              "image": "Сувлаки/DSC09030.webp",
+              "price": "330руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Сувлаки Люля-кебаб из баранины",
+              "image": "Сувлаки/DSC09030.webp",
+              "price": "400руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Сувлаки Свинина",
+              "image": "Сувлаки/DSC09030.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Сувлаки Курица",
+              "image": "Сувлаки/DSC09030.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            }
+          ],
+          "logo": "assets/Сувлаки/logo.png"
+        },
+        {
+          "name": "Бургеры",
+          "logo": "assets/Бургеры/logo.png",
+          "products": [
+            {
+              "name": "Бургер с говядиной",
+              "image": "Бургеры/DSC09012.webp",
+              "price": "370руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Бургер с говядиной и свининой",
+              "image": "Бургеры/DSC09012.webp",
+              "price": "350руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Бургер с курицей",
+              "image": "Бургеры/DSC09012.webp",
+              "price": "320руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Хот дог",
+              "image": "Бургеры/DSC09010.webp",
+              "price": "120руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Самса Баранина",
+              "image": "Бургеры/DSC09008.webp",
+              "price": "140руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Самса Курица",
+              "image": "Бургеры/DSC09008.webp",
+              "price": "120руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Самса Говядина",
+              "image": "Бургеры/DSC09008.webp",
+              "price": "130руб",
+              "description": "1 шт"
+            }
+          ],
+          "logo": "assets/Бургеры/logo.png"
+        },
+        {
+          "name": "Хинкали_и_хачапури",
+          "logo": "assets/Хинкали_и_хачапури/logo.png",
+          "products": [
+            {
+              "name": "Хинкали (говядина и свинина)",
+              "image": "hinkali_govyadina_svinina.jpg",
+              "price": "400руб",
+              "description": "5 шт"
+            },
+            {
+              "name": "Хинкали (баранина и говядина)",
+              "image": "hinkali_baranina_govyadina.jpg",
+              "price": "440руб",
+              "description": "5 шт"
+            },
+            {
+              "name": "Квари (вареник с сулугуни)",
+              "image": "kvari_suluguni.jpg",
+              "price": "370руб",
+              "description": "4 шт"
+            },
+            {
+              "name": "Хачапури по-аджарски",
+              "image": "khachapuri_po_adzharski.jpg",
+              "price": "480руб",
+              "description": "300 гр"
+            },
+            {
+              "name": "Хачапури по-мегрельски",
+              "image": "khachapuri_po_megrelsky.jpg",
+              "price": "520руб",
+              "description": "550 гр"
+            }
+          ],
+          "logo": "assets/Хинкали_и_хачапури/logo.png"
+        },
+        {
+          "name": "Лапша",
+          "logo": "assets/Лапша/logo.png",
+          "products": [
+            {
+              "name": "Лапша с креветкой",
+              "image": "Лапша/DSC08977.webp",
+              "price": "380руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Лапша с морепродуктами",
+              "image": "Лапша/DSC09024.webp",
+              "price": "350руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Лапша с курицей",
+              "image": "Лапша/DSC09024.webp",
+              "price": "330руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Лапша со свининой",
+              "image": "Лапша/DSC09024.webp",
+              "price": "330руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Лапша с овощами",
+              "image": "Лапша/DSC09024.webp",
+              "price": "280руб",
+              "description": "1 шт"
+            }
+          ],
+          "logo": "assets/Лапша/logo.png"
+        },
+        {
+          "name": "Супы",
+          "logo": "assets/Супы/logo.png",
+          "products": [
+            {
+              "name": "Солянка",
+              "image": "Супы/DSC08985.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Лагман",
+              "image": "Супы/DSC08983.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Борщ",
+              "image": "Супы/DSC08987.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Окрошка",
+              "image": "okroshka.jpg",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Гороховый",
+              "image": "Супы/DSC08989.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Пельмени (15 шт)",
+              "image": "Супы/DSC08992.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Харчо",
+              "image": "Супы/DSC08980.webp",
+              "price": "300руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Шурпа",
+              "image": "Супы/DSC08983.webp",
+              "price": "320руб",
+              "description": "1 шт"
+            }
+          ],
+          "logo": "assets/Супы/logo.png"
+        },
+        {
+          "name": "Салаты",
+          "logo": "assets/Салаты/logo.png",
+          "products": [
+            {
+              "name": "Цезарь",
+              "image": "Салаты/DSC08975.webp",
+              "price": "250руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Оливье",
+              "image": "Салаты/DSC08974.webp",
+              "price": "220руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Салат Свекольный",
+              "image": "Салаты/DSC08972.webp",
+              "price": "200руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Салат огурцы, помидоры",
+              "image": "Салаты/DSC09038.webp",
+              "price": "300руб",
+              "description": "300 гр"
+            },
+            {
+              "name": "Морковь по-корейски",
+              "image": "Салаты/DSC08993.webp",
+              "price": "170руб",
+              "description": "200 гр"
+            },
+            {
+              "name": "Греческий",
+              "image": "grecheskii.jpg",
+              "price": "350руб",
+              "description": "300 гр"
+            }
+          ],
+          "logo": "assets/Салаты/logo.png"
+        },
+        {
+          "name": "Снеки",
+          "logo": "assets/Снеки/logo.png",
+          "products": [
+            {
+              "name": "Наггетсы",
+              "image": "Снеки/DSC09018.webp",
+              "price": "200руб",
+              "description": "8 шт"
+            },
+            {
+              "name": "Палочки (сырные)",
+              "image": "Снеки/DSC09019.webp",
+              "price": "200руб",
+              "description": "8 шт"
+            },
+            {
+              "name": "Картофель фри",
+              "image": "Снеки/DSC09021.webp",
+              "price": "160руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Картофель по-деревенски",
+              "image": "Снеки/DSC09022.webp",
+              "price": "160руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Луковые кольца в панировке",
+              "image": "lukovye_kolca_10.jpg",
+              "price": "160руб",
+              "description": "10 шт"
+            },
+            {
+              "name": "Кольца кальмара в панировке",
+              "image": "kolca_kalmara_4.jpg",
+              "price": "200руб",
+              "description": "4 шт"
+            },
+            {
+              "name": "Креветки в панировке",
+              "image": "krevetki_v_panirovke_6.jpg",
+              "price": "300руб",
+              "description": "6 шт"
+            },
+            {
+              "name": "Соус Heinz",
+              "image": "Снеки/DSC09089.webp",
+              "price": "60руб",
+              "description": "1 шт"
+            }
+          ],
+          "logo": "assets/Снеки/logo.png"
+        },
+        {
+          "name": "Кондитерские_изделия",
+          "logo": "assets/Кондитерские_изделия/logo.png",
+          "products": [
+            {
+              "name": "Пахлава",
+              "image": "Кондитерские_изделия/DSC09057.webp",
+              "price": "100руб",
+              "description": "100 гр"
+            },
+            {
+              "name": "Торт Красный бархат",
+              "image": "Кондитерские_изделия/DSC09045.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Прага",
+              "image": "Кондитерские_изделия/DSC09055.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Керрот кейк",
+              "image": "Кондитерские_изделия/DSC09046.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Чизкейк",
+              "image": "Кондитерские_изделия/DSC09047.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Медовик",
+              "image": "Кондитерские_изделия/DSC09054.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Пончики от Мама Вера",
+              "image": "Кондитерские_изделия/DSC09041.webp",
+              "price": "110руб",
+              "description": "1 шт"
+            },
+            {
+              "name": "Малиновая бомба",
+              "image": "Кондитерские_изделия/DSC09056.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Орео",
+              "image": "Кондитерские_изделия/DSC09051.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Баблгам",
+              "image": "Кондитерские_изделия/DSC09049.webp",
+              "price": "220руб",
+              "description": "1 кусок"
+            },
+            {
+              "name": "Молочная девочка",
+              "image": "molochnaya_devochka_kusok.jpg",
+              "price": "220руб",
+              "description": "1 кусок"
+            }
+          ],
+          "logo": "assets/Кондитерские_изделия/logo.png"
+        },
+        {
+          "name": "Напитки",
+          "logo": "assets/Напитки/logo.png",
+          "products": [
+            {
+              "name": "Морс",
+              "image": "Напитки/DSC09078.webp",
+              "price": "130руб",
+              "description": "500 мл"
+            },
+            {
+              "name": "Бардзими",
+              "image": "Напитки/DSC09067.webp",
+              "price": "130руб",
+              "description": "500 мл"
+            },
+            {
+              "name": "Сок Добрый",
+              "image": "Напитки/DSC09069.webp",
+              "price": "180руб",
+              "description": "1 л"
+            },
+            {
+              "name": "Кока Кола в стекле",
+              "image": "Напитки/DSC09072.webp",
+              "price": "130руб",
+              "description": "0,33 л"
+            },
+            {
+              "name": "Кока Кола",
+              "image": "Напитки/DSC09074.webp",
+              "price": "120руб",
+              "description": "0,5 л"
+            },
+            {
+              "name": "Кока Кола",
+              "image": "Напитки/DSC09071.webp",
+              "price": "180руб",
+              "description": "1 л"
+            },
+            {
+              "name": "Jermuk",
+              "image": "Напитки/DSC09075.webp",
+              "price": "100руб",
+              "description": "500 мл"
+            },
+            {
+              "name": "Аква Кристалл",
+              "image": "Напитки/DSC09066.webp",
+              "price": "130руб",
+              "description": "500 мл"
+            },
+            {
+              "name": "Чай",
+              "image": "chai_200.jpg",
+              "price": "60руб",
+              "description": "200 мл"
+            }
+          ],
+          "logo": "assets/Напитки/logo.png"
+        }
+      ]
+    }
+  ]
+}
