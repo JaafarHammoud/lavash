@@ -489,23 +489,27 @@ class AppState {
         
         productsGrid.innerHTML = category.products.map(product => {
             if (product.options && product.options.length > 1) {
-                // Product with multiple options
+                // Product with multiple options - use checkboxes
                 return `
                     <div class="product-card fade-in">
                         <img src="assets/${product.image}" alt="${product.name}" class="product-image">
                         <div class="product-info">
                             <div class="product-name">${product.name}</div>
-                            <div class="product-description">${product.description}</div>
+                            <div class="product-description" id="desc-${product.name.replace(/\s+/g, '-')}">${product.description}</div>
                             <div class="product-options">
-                                ${product.options.map(option => `
-                                    <div class="option-item">
-                                        <span class="option-name">${option.name}</span>
-                                        <span class="option-price">${option.price}</span>
-                                    </div>
+                                ${product.options.map((option, index) => `
+                                    <label class="option-checkbox">
+                                        <input type="radio" name="${product.name.replace(/\s+/g, '-')}" value="${index}" ${index === 0 ? 'checked' : ''} 
+                                               onchange="appState.updateProductDescription('${product.name.replace(/\s+/g, '-')}', ${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                                        <span class="option-text">
+                                            <span class="option-name">${option.name}</span>
+                                            <span class="option-price">${option.price}</span>
+                                        </span>
+                                    </label>
                                 `).join('')}
                             </div>
-                            <button class="add-to-cart-btn" onclick="appState.addToCart(${JSON.stringify(product).replace(/"/g, '&quot;')}, ${JSON.stringify(product.options[0]).replace(/"/g, '&quot;')}, this)">
-                                Добавить в корзину - ${product.options[0].price}
+                            <button class="add-to-cart-btn" onclick="appState.addToCartWithSelectedOption('${product.name.replace(/\s+/g, '-')}', ${JSON.stringify(product).replace(/"/g, '&quot;')}, this)">
+                                Добавить в корзину
                             </button>
                         </div>
                     </div>
@@ -542,6 +546,24 @@ class AppState {
                 `;
             }
         }).join('');
+    }
+
+    // Product option handling
+    updateProductDescription(productId, product) {
+        const selectedOptionIndex = document.querySelector(`input[name="${productId}"]:checked`).value;
+        const selectedOption = product.options[selectedOptionIndex];
+        const descriptionElement = document.getElementById(`desc-${productId}`);
+        
+        if (descriptionElement) {
+            descriptionElement.textContent = selectedOption.name;
+        }
+    }
+
+    addToCartWithSelectedOption(productId, product, buttonElement) {
+        const selectedOptionIndex = document.querySelector(`input[name="${productId}"]:checked`).value;
+        const selectedOption = product.options[selectedOptionIndex];
+        
+        this.addToCart(product, selectedOption, buttonElement);
     }
 
     // Error handling
