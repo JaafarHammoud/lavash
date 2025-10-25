@@ -340,6 +340,12 @@ class AppState {
         this.currentBranch = null;
         this.currentCategory = null;
         this.saveNavigationState();
+        
+        // Update browser history
+        if (window.history.state !== 'branch-selection') {
+            window.history.pushState('branch-selection', '', window.location.pathname);
+        }
+        
         document.getElementById('branchSelection').style.display = 'block';
         document.getElementById('categoriesSection').style.display = 'none';
         document.getElementById('productsSection').style.display = 'none';
@@ -416,6 +422,10 @@ class AppState {
         this.currentBranch = branch;
         this.currentCategory = null;
         this.saveNavigationState();
+        
+        // Update browser history
+        window.history.pushState('categories', '', `#categories-${branch.name.replace(/\s+/g, '-')}`);
+        
         document.getElementById('branchSelection').style.display = 'none';
         document.getElementById('categoriesSection').style.display = 'block';
         document.getElementById('productsSection').style.display = 'none';
@@ -427,6 +437,10 @@ class AppState {
     showProducts(category) {
         this.currentCategory = category;
         this.saveNavigationState();
+        
+        // Update browser history
+        window.history.pushState('products', '', `#products-${category.name.replace(/\s+/g, '-')}`);
+        
         document.getElementById('categoriesSection').style.display = 'none';
         document.getElementById('productsSection').style.display = 'block';
         
@@ -498,14 +512,13 @@ class AppState {
                             <div class="product-description" id="desc-${product.name.replace(/\s+/g, '-')}">${product.description}</div>
                             <div class="product-options">
                                 ${product.options.map((option, index) => `
-                                    <label class="option-checkbox">
-                                        <input type="radio" name="${product.name.replace(/\s+/g, '-')}" value="${index}" ${index === 0 ? 'checked' : ''} 
-                                               onchange="appState.updateProductDescription('${product.name.replace(/\s+/g, '-')}', ${JSON.stringify(product).replace(/"/g, '&quot;')})">
-                                        <span class="option-text">
-                                            <span class="option-name">${option.name}</span>
-                                            <span class="option-price">${option.price}</span>
-                                        </span>
-                                    </label>
+                                    <button class="option-button ${index === 0 ? 'selected' : ''}" 
+                                            data-index="${index}" 
+                                            data-product-id="${product.name.replace(/\s+/g, '-')}"
+                                            onclick="appState.selectProductOption('${product.name.replace(/\s+/g, '-')}', ${index}, ${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                                        <span class="option-name">${option.name}</span>
+                                        <span class="option-price">${option.price}</span>
+                                    </button>
                                 `).join('')}
                             </div>
                             <button class="add-to-cart-btn" onclick="appState.addToCartWithSelectedOption('${product.name.replace(/\s+/g, '-')}', ${JSON.stringify(product).replace(/"/g, '&quot;')}, this)">
@@ -549,9 +562,19 @@ class AppState {
     }
 
     // Product option handling
-    updateProductDescription(productId, product) {
-        const selectedOptionIndex = document.querySelector(`input[name="${productId}"]:checked`).value;
-        const selectedOption = product.options[selectedOptionIndex];
+    selectProductOption(productId, optionIndex, product) {
+        // Remove selected class from all buttons for this product
+        const allButtons = document.querySelectorAll(`[data-product-id="${productId}"]`);
+        allButtons.forEach(button => button.classList.remove('selected'));
+        
+        // Add selected class to clicked button
+        const selectedButton = document.querySelector(`[data-product-id="${productId}"][data-index="${optionIndex}"]`);
+        if (selectedButton) {
+            selectedButton.classList.add('selected');
+        }
+        
+        // Update description
+        const selectedOption = product.options[optionIndex];
         const descriptionElement = document.getElementById(`desc-${productId}`);
         
         if (descriptionElement) {
@@ -559,11 +582,30 @@ class AppState {
         }
     }
 
+    updateProductDescription(productId, product) {
+        const selectedButton = document.querySelector(`[data-product-id="${productId}"].selected`);
+        if (selectedButton) {
+            const selectedOptionIndex = parseInt(selectedButton.getAttribute('data-index'));
+            const selectedOption = product.options[selectedOptionIndex];
+            const descriptionElement = document.getElementById(`desc-${productId}`);
+            
+            if (descriptionElement) {
+                descriptionElement.textContent = selectedOption.name;
+            }
+        }
+    }
+
     addToCartWithSelectedOption(productId, product, buttonElement) {
-        const selectedOptionIndex = document.querySelector(`input[name="${productId}"]:checked`).value;
-        const selectedOption = product.options[selectedOptionIndex];
-        
-        this.addToCart(product, selectedOption, buttonElement);
+        const selectedButton = document.querySelector(`[data-product-id="${productId}"].selected`);
+        if (selectedButton) {
+            const selectedOptionIndex = parseInt(selectedButton.getAttribute('data-index'));
+            const selectedOption = product.options[selectedOptionIndex];
+            this.addToCart(product, selectedOption, buttonElement);
+        } else {
+            // Fallback to first option if none selected
+            const selectedOption = product.options[0];
+            this.addToCart(product, selectedOption, buttonElement);
+        }
     }
 
     // Error handling
@@ -605,6 +647,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize cart UI
     appState.updateCartUI();
+    
+    // Initialize browser history state
+    if (!window.history.state) {
+        window.history.replaceState('branch-selection', '', window.location.pathname);
+    }
     
     // Restore navigation state after data is loaded
     setTimeout(() => {
@@ -672,6 +719,31 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.getElementById('successOverlay').addEventListener('click', () => {
         closeSuccessModal();
+    });
+    
+    // Handle browser back button
+    window.addEventListener('popstate', (event) => {
+        const state = event.state;
+        
+        // Prevent infinite loops by checking if we're already in the correct state
+        const currentSection = document.querySelector('section[style*="block"]');
+        
+        if (state === 'branch-selection' || state === null) {
+            if (currentSection && currentSection.id !== 'branchSelection') {
+                appState.showBranchSelection(true);
+            }
+        } else if (state === 'categories' && appState.currentBranch) {
+            if (currentSection && currentSection.id !== 'categoriesSection') {
+                appState.showCategories(appState.currentBranch);
+            }
+        } else if (state === 'products' && appState.currentCategory) {
+            if (currentSection && currentSection.id !== 'productsSection') {
+                appState.showProducts(appState.currentCategory);
+            }
+        } else {
+            // Fallback to branch selection
+            appState.showBranchSelection(true);
+        }
     });
 });
 
