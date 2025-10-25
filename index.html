@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаваш - Ресторан грузинской кухни</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="assets/general/logo.png" alt="Лаваш" class="logo-img">
+                    <span class="logo-text">Лаваш</span>
+                </div>
+                <nav class="nav">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="cart-icon" id="cartIcon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Branch Selection Screen -->
+    <section class="branch-selection" id="branchSelection">
+        <div class="container">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Добро пожаловать в Лаваш</h1>
+                    <p class="hero-subtitle">Выберите филиал для продолжения</p>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/general/hero.jpg" alt="Грузинская кухня" class="hero-img">
+                </div>
+            </div>
+            <div class="branches-grid" id="branchesGrid">
+                <!-- Branches will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Screen -->
+    <section class="categories-section" id="categoriesSection" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <button class="back-btn" id="backBtn">
+                    <i class="fas fa-arrow-left"></i>
+                    Назад к филиалам
+                </button>
+                <h2 class="section-title" id="branchTitle">Меню</h2>
+            </div>
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Categories will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Screen -->
+    <section class="products-section" id="productsSection" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <button class="back-btn" id="backToCategoriesBtn">
+                    <i class="fas fa-arrow-left"></i>
+                    Назад к категориям
+                </button>
+                <h2 class="section-title" id="categoryTitle">Продукты</h2>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Корзина</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span id="cartTotal">0 ₽</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <h2>Оформление заказа</h2>
+                <button class="close-checkout" id="closeCheckout">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="checkout-body">
+                <div class="order-summary">
+                    <h3>Ваш заказ</h3>
+                    <div class="order-items" id="orderItems">
+                        <!-- Order items will be loaded dynamically -->
+                    </div>
+                    <div class="order-total">
+                        <span>Итого:</span>
+                        <span id="orderTotal">0 ₽</span>
+                    </div>
+                </div>
+                <form class="checkout-form" id="checkoutForm">
+                    <div class="form-group">
+                        <label for="customerName">Имя</label>
+                        <input type="text" id="customerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerPhone">Телефон</label>
+                        <input type="tel" id="customerPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerAddress">Адрес доставки</label>
+                        <textarea id="customerAddress" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="orderNotes">Комментарий к заказу</label>
+                        <textarea id="orderNotes" rows="2"></textarea>
+                    </div>
+                    <button type="submit" class="submit-order-btn">Подтвердить заказ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Overlay -->
+    <div class="checkout-overlay" id="checkoutOverlay"></div>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="success-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Заказ принят!</h2>
+            <p>Мы свяжемся с вами в ближайшее время для подтверждения заказа.</p>
+            <button class="success-btn" id="successBtn">Понятно</button>
+        </div>
+    </div>
+
+    <!-- Success Overlay -->
+    <div class="success-overlay" id="successOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

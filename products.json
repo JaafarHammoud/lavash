@@ -317,7 +317,7 @@
           "logo": "assets/Шашлык/logo.png"
         },
         {
-          "name": "Рыба_на_мангале",
+          "name": "Рыба на мангале",
           "logo": "assets/Рыба_на_мангале/logo.png",
           "products": [
             {
@@ -570,7 +570,7 @@
           "logo": "assets/Бургеры/logo.png"
         },
         {
-          "name": "Хинкали_и_хачапури",
+          "name": "Хинкали и хачапури",
           "logo": "assets/Хинкали_и_хачапури/logo.png",
           "products": [
             {
@@ -797,7 +797,7 @@
           "logo": "assets/Снеки/logo.png"
         },
         {
-          "name": "Кондитерские_изделия",
+          "name": "Кондитерские изделия",
           "logo": "assets/Кондитерские_изделия/logo.png",
           "products": [
             {
@@ -933,10 +933,10 @@
       ]
     },
     {
-      "id": 1,
-      "name": "Flowers",
-      "address": "Академка Сахарова 105",
-      "phone": "+7 987 654 32 10",
+      "id": 2,
+      "name": "testing",
+      "address": "testing 123",
+      "phone": "+7 987 654 32 11",
       "categories": [
         {
           "name": "Шашлык",
