@@ -80,7 +80,7 @@ class AppState {
     }
 
     // Cart management
-    addToCart(product, option = null) {
+    addToCart(product, option = null, buttonElement = null) {
         const cartItem = {
             id: `${product.name}-${option ? option.name : 'default'}`,
             name: product.name,
@@ -90,7 +90,9 @@ class AppState {
             quantity: 1
         };
 
+        const isFirstItem = this.cart.length === 0;
         const existingItem = this.cart.find(item => item.id === cartItem.id);
+        
         if (existingItem) {
             existingItem.quantity += 1;
         } else {
@@ -99,7 +101,13 @@ class AppState {
 
         this.saveCartToStorage();
         this.updateCartUI();
-        this.showCartNotification();
+        
+        // Show animation for first item only
+        if (isFirstItem && buttonElement) {
+            this.showAddToCartAnimation(buttonElement);
+        } else {
+            this.showCartNotification();
+        }
     }
 
     removeFromCart(itemId) {
@@ -130,14 +138,53 @@ class AppState {
 
     clearCart() {
         this.cart = [];
-        this.clearCartStorage();
+        localStorage.removeItem('lavash_cart');
+        // Force immediate UI update
         this.updateCartUI();
+    }
+
+    clearCartAndGoHome() {
+        // Clear cart and navigation
+        this.clearCart();
+        this.clearNavigationState();
+        
+        // Close any open modals/sidebars
+        const cartSidebar = document.getElementById('cartSidebar');
+        const checkoutModal = document.getElementById('checkoutModal');
+        const successModal = document.getElementById('successModal');
+        
+        if (cartSidebar.classList.contains('open')) {
+            closeCart();
+        }
+        if (checkoutModal.classList.contains('open')) {
+            closeCheckout();
+        }
+        if (successModal.classList.contains('open')) {
+            closeSuccessModal();
+        }
+        
+        // Go to home page (branch selection)
+        this.showBranchSelection(true);
+        
+        // Show notification
+        this.showCartClearedNotification();
     }
 
     // UI Updates
     updateCartUI() {
         const cartCount = document.getElementById('cartCount');
-        cartCount.textContent = this.cart.length;
+        const oldCount = parseInt(cartCount.textContent) || 0;
+        const newCount = this.cart.length;
+        
+        // Add animation class for visual feedback
+        if (newCount === 0 && oldCount > 0) {
+            cartCount.classList.add('cart-cleared-animation');
+            setTimeout(() => {
+                cartCount.classList.remove('cart-cleared-animation');
+            }, 500);
+        }
+        
+        cartCount.textContent = newCount;
 
         const cartItems = document.getElementById('cartItems');
         const cartTotal = document.getElementById('cartTotal');
@@ -178,6 +225,54 @@ class AppState {
         }
     }
 
+    showAddToCartAnimation(buttonElement) {
+        // Create animated element
+        const animatedElement = document.createElement('div');
+        animatedElement.className = 'add-to-cart-animation';
+        animatedElement.innerHTML = '<i class="fas fa-shopping-cart"></i>';
+        
+        // Get button position
+        const buttonRect = buttonElement.getBoundingClientRect();
+        const cartIcon = document.getElementById('cartIcon');
+        const cartRect = cartIcon.getBoundingClientRect();
+        
+        // Set initial position
+        animatedElement.style.cssText = `
+            position: fixed;
+            left: ${buttonRect.left + buttonRect.width / 2}px;
+            top: ${buttonRect.top + buttonRect.height / 2}px;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            z-index: 5000;
+            pointer-events: none;
+            transform: scale(0);
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        `;
+        
+        document.body.appendChild(animatedElement);
+        
+        // Animate to cart
+        setTimeout(() => {
+            animatedElement.style.transform = `scale(1) translate(${cartRect.left - buttonRect.left - buttonRect.width / 2}px, ${cartRect.top - buttonRect.top - buttonRect.height / 2}px)`;
+        }, 50);
+        
+        // Remove element and show notification
+        setTimeout(() => {
+            animatedElement.style.transform += ' scale(0)';
+            setTimeout(() => {
+                document.body.removeChild(animatedElement);
+                this.showCartNotification();
+            }, 300);
+        }, 600);
+    }
+
     showCartNotification() {
         // Create a temporary notification
         const notification = document.createElement('div');
@@ -206,14 +301,115 @@ class AppState {
         }, 2000);
     }
 
+    showCartClearedNotification() {
+        // Create a temporary notification for cart cleared
+        const notification = document.createElement('div');
+        notification.className = 'cart-cleared-notification';
+        notification.innerHTML = '<i class="fas fa-trash"></i> Корзина очищена';
+        notification.style.cssText = `
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            z-index: 5000;
+            animation: slideInRight 0.3s ease-out;
+        `;
+        
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.style.animation = 'slideInRight 0.3s ease-out reverse';
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 300);
+        }, 2000);
+    }
+
     // Navigation
-    showBranchSelection() {
+    showBranchSelection(forceShow = false) {
+        // Check if cart has items and show confirmation (unless forced)
+        if (this.cart.length > 0 && !forceShow) {
+            this.showBranchSwitchConfirmation();
+            return;
+        }
+        
         this.currentBranch = null;
         this.currentCategory = null;
         this.saveNavigationState();
         document.getElementById('branchSelection').style.display = 'block';
         document.getElementById('categoriesSection').style.display = 'none';
         document.getElementById('productsSection').style.display = 'none';
+    }
+
+    showBranchSwitchConfirmation() {
+        const confirmationModal = document.createElement('div');
+        confirmationModal.className = 'branch-confirmation-modal';
+        confirmationModal.innerHTML = `
+            <div class="confirmation-content">
+                <div class="confirmation-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>Очистить корзину?</h3>
+                <p>В вашей корзине есть товары из текущего филиала. При переключении на другой филиал корзина будет очищена.</p>
+                <div class="confirmation-buttons">
+                    <button class="confirm-btn cancel" onclick="this.closest('.branch-confirmation-modal').remove()">
+                        <i class="fas fa-times"></i>
+                        Отмена
+                    </button>
+                    <button class="confirm-btn confirm" onclick="appState.confirmBranchSwitch()">
+                        <i class="fas fa-trash"></i>
+                        Очистить и продолжить
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        confirmationModal.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--overlay-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 4000;
+            animation: fadeIn 0.3s ease-out;
+        `;
+        
+        document.body.appendChild(confirmationModal);
+    }
+
+    confirmBranchSwitch() {
+        // Remove confirmation modal first
+        const modal = document.querySelector('.branch-confirmation-modal');
+        if (modal) {
+            modal.remove();
+        }
+        
+        // Clear cart and navigation
+        this.clearCart();
+        this.clearNavigationState();
+        
+        // Immediately update cart UI to show empty state
+        this.updateCartUI();
+        
+        // Show branch selection
+        this.currentBranch = null;
+        this.currentCategory = null;
+        document.getElementById('branchSelection').style.display = 'block';
+        document.getElementById('categoriesSection').style.display = 'none';
+        document.getElementById('productsSection').style.display = 'none';
+        
+        // Show success notification after a small delay to ensure UI is updated
+        setTimeout(() => {
+            this.showCartClearedNotification();
+        }, 100);
     }
 
     showCategories(branch) {
@@ -308,7 +504,7 @@ class AppState {
                                     </div>
                                 `).join('')}
                             </div>
-                            <button class="add-to-cart-btn" onclick="appState.addToCart(${JSON.stringify(product).replace(/"/g, '&quot;')}, ${JSON.stringify(product.options[0]).replace(/"/g, '&quot;')})">
+                            <button class="add-to-cart-btn" onclick="appState.addToCart(${JSON.stringify(product).replace(/"/g, '&quot;')}, ${JSON.stringify(product.options[0]).replace(/"/g, '&quot;')}, this)">
                                 Добавить в корзину - ${product.options[0].price}
                             </button>
                         </div>
@@ -323,7 +519,7 @@ class AppState {
                             <div class="product-name">${product.name}</div>
                             <div class="product-description">${product.description}</div>
                             <div class="product-price">${product.price}</div>
-                            <button class="add-to-cart-btn" onclick="appState.addToCart(${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                            <button class="add-to-cart-btn" onclick="appState.addToCart(${JSON.stringify(product).replace(/"/g, '&quot;')}, null, this)">
                                 Добавить в корзину
                             </button>
                         </div>
@@ -338,7 +534,7 @@ class AppState {
                             <div class="product-name">${product.name}</div>
                             <div class="product-description">${product.description}</div>
                             <div class="product-price">${product.price}</div>
-                            <button class="add-to-cart-btn" onclick="appState.addToCart(${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                            <button class="add-to-cart-btn" onclick="appState.addToCart(${JSON.stringify(product).replace(/"/g, '&quot;')}, null, this)">
                                 Добавить в корзину
                             </button>
                         </div>
@@ -585,6 +781,9 @@ document.addEventListener('keydown', function(e) {
         } else if (document.getElementById('successModal').classList.contains('open')) {
             closeSuccessModal();
         }
+    } else if (e.key === 'Delete') {
+        // Clear cart and go to home page
+        appState.clearCartAndGoHome();
     }
 });
 
