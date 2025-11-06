@@ -6,6 +6,7 @@ class AppState {
         this.cart = this.loadCartFromStorage();
         this.products = null;
         this.theme = localStorage.getItem('theme') || 'light';
+        this.uiQuantities = {};
     }
 
     // Cart persistence
@@ -222,6 +223,117 @@ class AppState {
             `).join('');
             
             cartTotal.textContent = `${this.getCartTotal()} ₽`;
+        }
+    }
+
+    // Quantity controls helpers
+    getSelectedOptionIndex(productId) {
+        const selectedButton = document.querySelector(`[data-product-id="${productId}"].selected`);
+        if (selectedButton) {
+            return parseInt(selectedButton.getAttribute('data-index'));
+        }
+        return 0;
+    }
+
+    getQuantityKey(productId, product) {
+        const hasOptions = product.options && product.options.length > 0;
+        const optionIndex = hasOptions ? this.getSelectedOptionIndex(productId) : -1;
+        return `${productId}::${optionIndex}`;
+    }
+
+    getProductQuantity(productId, product) {
+        const key = this.getQuantityKey(productId, product);
+        return this.uiQuantities[key] && this.uiQuantities[key] > 0 ? this.uiQuantities[key] : 1;
+    }
+
+    setProductQuantity(productId, product, quantity) {
+        const safeQty = Math.max(1, quantity | 0);
+        const key = this.getQuantityKey(productId, product);
+        this.uiQuantities[key] = safeQty;
+        const qtySpan = document.getElementById(`qty-${productId}`);
+        if (qtySpan) qtySpan.textContent = String(safeQty);
+    }
+
+    incrementProductQuantity(productId, product) {
+        const current = this.getProductQuantity(productId, product);
+        this.setProductQuantity(productId, product, current + 1);
+    }
+
+    decrementProductQuantity(productId, product) {
+        const current = this.getProductQuantity(productId, product);
+        this.setProductQuantity(productId, product, Math.max(1, current - 1));
+    }
+
+    addMultipleToCart(productId, product, buttonElement) {
+        const qty = this.getProductQuantity(productId, product);
+        const hasOptions = product.options && product.options.length > 0;
+        const optionIndex = hasOptions ? this.getSelectedOptionIndex(productId) : -1;
+        const selectedOption = hasOptions ? product.options[optionIndex] : null;
+        for (let i = 0; i < qty; i++) {
+            this.addToCart(product, selectedOption, buttonElement);
+        }
+    }
+
+    // Card controls behavior: button -> controls on first add
+    getCartItemIdFor(productId, product) {
+        const hasOptions = product.options && product.options.length > 0;
+        const optionIndex = hasOptions ? this.getSelectedOptionIndex(productId) : -1;
+        const selectedOption = hasOptions ? product.options[optionIndex] : null;
+        return `${product.name}-${selectedOption ? selectedOption.name : 'default'}`;
+    }
+
+    getCartItemQuantityById(itemId) {
+        const item = this.cart.find(i => i.id === itemId);
+        return item ? item.quantity : 0;
+    }
+
+    updateControlsVisibility(productId, showControls) {
+        const addBtn = document.getElementById(`addbtn-${productId}`);
+        const controls = document.getElementById(`controls-${productId}`);
+        if (addBtn && controls) {
+            addBtn.style.display = showControls ? 'none' : 'block';
+            controls.style.display = showControls ? 'flex' : 'none';
+        }
+    }
+
+    addFirstToCart(productId, product, buttonElement) {
+        const hasOptions = product.options && product.options.length > 0;
+        const optionIndex = hasOptions ? this.getSelectedOptionIndex(productId) : -1;
+        const selectedOption = hasOptions ? product.options[optionIndex] : null;
+        this.addToCart(product, selectedOption, buttonElement);
+        const itemId = this.getCartItemIdFor(productId, product);
+        const qty = this.getCartItemQuantityById(itemId) || 1;
+        const qtySpan = document.getElementById(`qty-${productId}`);
+        if (qtySpan) qtySpan.textContent = String(qty);
+        this.updateControlsVisibility(productId, true);
+    }
+
+    incrementFromCard(productId, product) {
+        const hasOptions = product.options && product.options.length > 0;
+        const optionIndex = hasOptions ? this.getSelectedOptionIndex(productId) : -1;
+        const selectedOption = hasOptions ? product.options[optionIndex] : null;
+        this.addToCart(product, selectedOption, null);
+        const itemId = this.getCartItemIdFor(productId, product);
+        const qty = this.getCartItemQuantityById(itemId) || 1;
+        const qtySpan = document.getElementById(`qty-${productId}`);
+        if (qtySpan) qtySpan.textContent = String(qty);
+    }
+
+    decrementFromCard(productId, product) {
+        const itemId = this.getCartItemIdFor(productId, product);
+        const current = this.getCartItemQuantityById(itemId);
+        if (current > 1) {
+            this.updateCartQuantity(itemId, current - 1);
+            const qtySpan = document.getElementById(`qty-${productId}`);
+            if (qtySpan) qtySpan.textContent = String(current - 1);
+        } else if (current === 1) {
+            this.removeFromCart(itemId);
+            this.updateControlsVisibility(productId, false);
+            const qtySpan = document.getElementById(`qty-${productId}`);
+            if (qtySpan) qtySpan.textContent = '1';
+        } else {
+            // If not in cart, ensure button is visible
+            this.updateControlsVisibility(productId, false);
         }
     }
 
@@ -521,9 +633,18 @@ class AppState {
                                     </button>
                                 `).join('')}
                             </div>
-                            <button class="add-to-cart-btn" onclick="appState.addToCartWithSelectedOption('${product.name.replace(/\s+/g, '-')}', ${JSON.stringify(product).replace(/"/g, '&quot;')}, this)">
-                                Добавить в корзину
-                            </button>
+                            <button id="addbtn-${product.name.replace(/\s+/g, '-') }" class="add-icon-btn" onclick="appState.addFirstToCart('${product.name.replace(/\s+/g, '-')}', ${JSON.stringify(product).replace(/"/g, '&quot;')}, this)"><i class=\"fas fa-plus\"></i></button>
+                            <div id="controls-${product.name.replace(/\s+/g, '-') }" class="product-controls" style="display:none;">
+                                <div class="qty-controls">
+                                    <button class="quantity-btn" onclick="appState.decrementFromCard('${product.name.replace(/\s+/g, '-')}', ${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <span id="qty-${product.name.replace(/\s+/g, '-')}">1</span>
+                                    <button class="quantity-btn" onclick="appState.incrementFromCard('${product.name.replace(/\s+/g, '-')}', ${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 `;
@@ -536,9 +657,18 @@ class AppState {
                             <div class="product-name">${product.name}</div>
                             <div class="product-description">${product.description}</div>
                             <div class="product-price">${product.price}</div>
-                            <button class="add-to-cart-btn" onclick="appState.addToCart(${JSON.stringify(product).replace(/"/g, '&quot;')}, null, this)">
-                                Добавить в корзину
-                            </button>
+                            <button id="addbtn-${product.name.replace(/\s+/g, '-') }" class="add-icon-btn" onclick="appState.addFirstToCart('${product.name.replace(/\s+/g, '-')}', ${JSON.stringify(product).replace(/"/g, '&quot;')}, this)"><i class=\"fas fa-plus\"></i></button>
+                            <div id="controls-${product.name.replace(/\s+/g, '-') }" class="product-controls" style="display:none;">
+                                <div class="qty-controls">
+                                    <button class="quantity-btn" onclick="appState.decrementFromCard('${product.name.replace(/\s+/g, '-')}', ${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <span id="qty-${product.name.replace(/\s+/g, '-')}">1</span>
+                                    <button class="quantity-btn" onclick="appState.incrementFromCard('${product.name.replace(/\s+/g, '-')}', ${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 `;
@@ -551,9 +681,18 @@ class AppState {
                             <div class="product-name">${product.name}</div>
                             <div class="product-description">${product.description}</div>
                             <div class="product-price">${product.price}</div>
-                            <button class="add-to-cart-btn" onclick="appState.addToCart(${JSON.stringify(product).replace(/"/g, '&quot;')}, null, this)">
-                                Добавить в корзину
-                            </button>
+                            <button id="addbtn-${product.name.replace(/\s+/g, '-') }" class="add-icon-btn" onclick="appState.addFirstToCart('${product.name.replace(/\s+/g, '-')}', ${JSON.stringify(product).replace(/"/g, '&quot;')}, this)"><i class=\"fas fa-plus\"></i></button>
+                            <div id="controls-${product.name.replace(/\s+/g, '-') }" class="product-controls" style="display:none;">
+                                <div class="qty-controls">
+                                    <button class="quantity-btn" onclick="appState.decrementFromCard('${product.name.replace(/\s+/g, '-')}', ${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <span id="qty-${product.name.replace(/\s+/g, '-')}">1</span>
+                                    <button class="quantity-btn" onclick="appState.incrementFromCard('${product.name.replace(/\s+/g, '-')}', ${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 `;
@@ -579,6 +718,12 @@ class AppState {
         
         if (descriptionElement) {
             descriptionElement.textContent = selectedOption.name;
+        }
+
+        // Update quantity display for the newly selected option
+        const qtySpan = document.getElementById(`qty-${productId}`);
+        if (qtySpan) {
+            qtySpan.textContent = String(this.getProductQuantity(productId, product));
         }
     }
 
@@ -653,17 +798,20 @@ document.addEventListener('DOMContentLoaded', function() {
         window.history.replaceState('branch-selection', '', window.location.pathname);
     }
     
-    // Restore navigation state after data is loaded
+    // Restore navigation state after data is loaded ONLY if URL has a hash
     setTimeout(() => {
+        const hasHash = typeof window !== 'undefined' && window.location && window.location.hash;
+        if (!hasHash) {
+            // Stay on home (branch selection) when visiting base URL
+            appState.showBranchSelection(true);
+            return;
+        }
         const savedState = appState.loadNavigationState();
-        if (savedState && savedState.currentBranch) {
-            if (savedState.currentCategory) {
-                // Restore to products view
-                appState.showProducts(savedState.currentCategory);
-            } else {
-                // Restore to categories view
-                appState.showCategories(savedState.currentBranch);
-            }
+        if (!savedState || !savedState.currentBranch) return;
+        if (window.location.hash.startsWith('#products-') && savedState.currentCategory) {
+            appState.showProducts(savedState.currentCategory);
+        } else if (window.location.hash.startsWith('#categories-')) {
+            appState.showCategories(savedState.currentBranch);
         }
     }, 100);
     
