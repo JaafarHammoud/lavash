@@ -125,6 +125,13 @@ body {
     background-color: var(--surface-color);
 }
 
+/* Hide delivery link on mobile */
+@media (max-width: 768px) {
+    .nav-link {
+        display: none;
+    }
+}
+
 .theme-toggle {
     background: none;
     border: none;
@@ -1208,10 +1215,28 @@ body {
     gap: 4px;
     color: var(--text-primary);
     font-size: 12px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
 }
 
 .mobile-menubar .menubar-btn i { font-size: 18px; color: var(--text-primary); }
 .mobile-menubar .menubar-btn span { line-height: 1; }
+
+.mobile-menubar .menubar-btn:disabled,
+.mobile-menubar .menubar-btn.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    color: var(--text-muted);
+}
+
+.mobile-menubar .menubar-btn:disabled i,
+.mobile-menubar .menubar-btn.disabled i {
+    color: var(--text-muted);
+}
+
+.mobile-menubar .menubar-btn:not(:disabled):not(.disabled):active {
+    opacity: 0.7;
+}
 
 @media (max-width: 768px) {
     .mobile-menubar { display: grid; grid-template-columns: repeat(3, 1fr); }

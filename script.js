@@ -465,6 +465,9 @@ class AppState {
         document.getElementById('productsSection').style.display = 'none';
         const delivery = document.getElementById('deliverySection');
         if (delivery) delivery.style.display = 'none';
+        
+        // Update mobile menubar button states
+        this.updateMobileMenubarState();
     }
 
     showBranchSwitchConfirmation() {
@@ -528,6 +531,9 @@ class AppState {
         document.getElementById('categoriesSection').style.display = 'none';
         document.getElementById('productsSection').style.display = 'none';
         
+        // Update mobile menubar button states
+        this.updateMobileMenubarState();
+        
         // Show success notification after a small delay to ensure UI is updated
         setTimeout(() => {
             this.showCartClearedNotification();
@@ -550,6 +556,9 @@ class AppState {
         
         document.getElementById('branchTitle').textContent = `Меню - ${branch.name}`;
         this.loadCategories(branch);
+        
+        // Update mobile menubar button states
+        this.updateMobileMenubarState();
     }
 
     showProducts(category) {
@@ -859,6 +868,20 @@ class AppState {
             document.body.removeChild(errorDiv);
         }, 3000);
     }
+
+    // Update mobile menubar button states
+    updateMobileMenubarState() {
+        const categoriesBtn = document.getElementById('menubarCategoriesBtn');
+        if (categoriesBtn) {
+            if (this.currentBranch) {
+                categoriesBtn.classList.remove('disabled');
+                categoriesBtn.disabled = false;
+            } else {
+                categoriesBtn.classList.add('disabled');
+                categoriesBtn.disabled = true;
+            }
+        }
+    }
 }
 
 // Initialize app
@@ -874,6 +897,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize cart UI
     appState.updateCartUI();
+    
+    // Initialize mobile menubar state
+    appState.updateMobileMenubarState();
     
     // Initialize browser history state
     if (!window.history.state) {
@@ -895,6 +921,8 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (window.location.hash.startsWith('#categories-')) {
             appState.showCategories(savedState.currentBranch);
         }
+        // Update mobile menubar state after restoring navigation
+        appState.updateMobileMenubarState();
     }, 100);
     
     // Event listeners
@@ -926,6 +954,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (mbCategories) {
         mbCategories.addEventListener('click', () => {
+            // Don't do anything if button is disabled
+            if (mbCategories.disabled || mbCategories.classList.contains('disabled')) {
+                return;
+            }
             if (appState.currentBranch) {
                 appState.showCategories(appState.currentBranch);
             } else {
