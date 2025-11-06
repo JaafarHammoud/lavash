@@ -1,0 +1,41 @@
+{
+  "branches": [
+    {
+      "name": "Цветы м-н, Приокский район",
+      "address": "Улица Академика Сахарова, 109а",
+      "phone": "+7 (831) 200-91-38 - +7 (831) 424-10-95",
+      "categories": [
+        { "name": "Шашлык", "logo": "assets/Шашлык/logo.png", "url": "products/czvety-mn-priokskiy-rayon/Шашлык.json" },
+        { "name": "Рыба на мангале", "logo": "assets/Рыба_на_мангале/logo.png", "url": "products/czvety-mn-priokskiy-rayon/Рыба_на_мангале.json" },
+        { "name": "Шаурма", "logo": "assets/Шаурма/logo.png", "url": "products/czvety-mn-priokskiy-rayon/Шаурма.json" },
+        { "name": "Сувлаки", "logo": "assets/Сувлаки/logo.png", "url": "products/czvety-mn-priokskiy-rayon/Сувлаки.json" },
+        { "name": "Бургеры", "logo": "assets/Бургеры/logo.png", "url": "products/czvety-mn-priokskiy-rayon/Бургеры.json" },
+        { "name": "Хинкали и хачапури", "logo": "assets/Хинкали_и_хачапури/logo.png", "url": "products/czvety-mn-priokskiy-rayon/Хинкали_и_хачапури.json" },
+        { "name": "Лапша", "logo": "assets/Лапша/logo.png", "url": "products/czvety-mn-priokskiy-rayon/Лапша.json" },
+        { "name": "Супы", "logo": "assets/Супы/logo.png", "url": "products/czvety-mn-priokskiy-rayon/Супы.json" },
+        { "name": "Салаты", "logo": "assets/Салаты/logo.png", "url": "products/czvety-mn-priokskiy-rayon/Салаты.json" },
+        { "name": "Снеки", "logo": "assets/Снеки/logo.png", "url": "products/czvety-mn-priokskiy-rayon/Снеки.json" },
+        { "name": "Кондитерские изделия", "logo": "assets/Кондитерские_изделия/logo.png", "url": "products/czvety-mn-priokskiy-rayon/Кондитерские_изделия.json" },
+        { "name": "Напитки", "logo": "assets/Напитки/logo.png", "url": "products/czvety-mn-priokskiy-rayon/Напитки.json" }
+      ]
+    },
+    {
+      "name": "Советский район",
+      "address": "​Улица Романтиков, 5",
+      "phone": "+7 (831) 423-76-97 - +7 (920) 049-99-02",
+      "categories": [
+        { "name": "Шаурма", "logo": "assets/Шаурма/logo.png", "url": "products/sovetskiy-rayon/Шаурма.json" },
+        { "name": "Сувлаки", "logo": "assets/Сувлаки/logo.png", "url": "products/sovetskiy-rayon/Сувлаки.json" },
+        { "name": "Бургеры", "logo": "assets/Бургеры/logo.png", "url": "products/sovetskiy-rayon/Бургеры.json" },
+        { "name": "Хинкали и хачапури", "logo": "assets/Хинкали_и_хачапури/logo.png", "url": "products/sovetskiy-rayon/Хинкали_и_хачапури.json" },
+        { "name": "Лапша", "logo": "assets/Лапша/logo.png", "url": "products/sovetskiy-rayon/Лапша.json" },
+        { "name": "Супы", "logo": "assets/Супы/logo.png", "url": "products/sovetskiy-rayon/Супы.json" },
+        { "name": "Салаты", "logo": "assets/Салаты/logo.png", "url": "products/sovetskiy-rayon/Салаты.json" },
+        { "name": "Снеки", "logo": "assets/Снеки/logo.png", "url": "products/sovetskiy-rayon/Снеки.json" },
+        { "name": "Кондитерские изделия", "logo": "assets/Кондитерские_изделия/logo.png", "url": "products/sovetskiy-rayon/Кондитерские_изделия.json" },
+        { "name": "Напитки", "logo": "assets/Напитки/logo.png", "url": "products/sovetskiy-rayon/Напитки.json" }
+      ]
+    }
+  ]
+}
+

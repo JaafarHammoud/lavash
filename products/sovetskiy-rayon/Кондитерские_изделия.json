@@ -1,0 +1,16 @@
+{
+  "products": [
+    {"name":"Пахлава","image":"Кондитерские_изделия/DSC09057.webp","price":"100руб","description":"100 гр"},
+    {"name":"Торт Красный бархат","image":"Кондитерские_изделия/DSC09045.webp","price":"220руб","description":"1 кусок"},
+    {"name":"Прага","image":"Кондитерские_изделия/DSC09055.webp","price":"220руб","description":"1 кусок"},
+    {"name":"Керрот кейк","image":"Кондитерские_изделия/DSC09046.webp","price":"220руб","description":"1 кусок"},
+    {"name":"Чизкейк","image":"Кондитерские_изделия/DSC09047.webp","price":"220руб","description":"1 кусок"},
+    {"name":"Медовик","image":"Кондитерские_изделия/DSC09054.webp","price":"220руб","description":"1 кусок"},
+    {"name":"Пончики от Мама Вера","image":"Кондитерские_изделия/DSC09041.webp","price":"110руб","description":"1 шт"},
+    {"name":"Малиновая бомба","image":"Кондитерские_изделия/DSC09056.webp","price":"220руб","description":"1 кусок"},
+    {"name":"Орео","image":"Кондитерские_изделия/DSC09051.webp","price":"220руб","description":"1 кусок"},
+    {"name":"Баблгам","image":"Кондитерские_изделия/DSC09049.webp","price":"220руб","description":"1 кусок"},
+    {"name":"Молочная девочка","image":"molochnaya_devochka_kusok.jpg","price":"220руб","description":"1 кусок"}
+  ]
+}
+

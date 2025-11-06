@@ -1,0 +1,14 @@
+{
+  "products": [
+    {"name":"Морс","image":"Напитки/DSC09078.webp","price":"130руб","description":"500 мл"},
+    {"name":"Бардзими","image":"Напитки/DSC09067.webp","price":"130руб","description":"500 мл"},
+    {"name":"Сок Добрый","image":"Напитки/DSC09069.webp","price":"180руб","description":"1 л"},
+    {"name":"Кока Кола в стекле","image":"Напитки/DSC09072.webp","price":"130руб","description":"0,33 л"},
+    {"name":"Кока Кола","image":"Напитки/DSC09074.webp","price":"120руб","description":"0,5 л"},
+    {"name":"Кока Кола","image":"Напитки/DSC09071.webp","price":"180руб","description":"1 л"},
+    {"name":"Jermuk","image":"Напитки/DSC09075.webp","price":"100руб","description":"500 мл"},
+    {"name":"Аква Кристалл","image":"Напитки/DSC09066.webp","price":"130руб","description":"500 мл"},
+    {"name":"Чай","image":"chai_200.jpg","price":"60руб","description":"200 мл"}
+  ]
+}
+

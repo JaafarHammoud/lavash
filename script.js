@@ -4,7 +4,9 @@ class AppState {
         this.currentBranch = null;
         this.currentCategory = null;
         this.cart = this.loadCartFromStorage();
-        this.products = null;
+        this.products = null; // legacy full data fallback
+        this.productsIndex = null; // new lightweight index
+        this.categoryCache = {}; // url -> products[]
         this.theme = localStorage.getItem('theme') || 'light';
         this.uiQuantities = {};
     }
@@ -563,7 +565,20 @@ class AppState {
     // Data loading
     async loadData() {
         try {
-            const response = await fetch('products.json');
+            // Try new lightweight index first
+            const idxResp = await fetch('products/index.json', { cache: 'no-cache' });
+            if (idxResp.ok) {
+                this.productsIndex = await idxResp.json();
+                this.loadBranchesFromIndex();
+                return;
+            }
+        } catch (e) {
+            // fallthrough to legacy
+        }
+
+        // Legacy fallback: load full products.json
+        try {
+            const response = await fetch('products.json', { cache: 'no-cache' });
             this.products = await response.json();
             this.loadBranches();
         } catch (error) {
@@ -589,6 +604,21 @@ class AppState {
         `).join('');
     }
 
+    loadBranchesFromIndex() {
+        const branchesGrid = document.getElementById('branchesGrid');
+        if (!this.productsIndex || !this.productsIndex.branches) {
+            branchesGrid.innerHTML = '<div class="empty-cart"><i class="fas fa-exclamation-triangle"></i><p>Нет доступных филиалов</p></div>';
+            return;
+        }
+        branchesGrid.innerHTML = this.productsIndex.branches.map(branch => `
+            <div class="branch-card fade-in" onclick="appState.showCategories(${JSON.stringify(branch).replace(/"/g, '&quot;')})">
+                <div class="branch-name">${branch.name}</div>
+                <div class="branch-address">${branch.address}</div>
+                <div class="branch-phone">${branch.phone}</div>
+            </div>
+        `).join('');
+    }
+
     loadCategories(branch) {
         const categoriesGrid = document.getElementById('categoriesGrid');
         
@@ -605,15 +635,43 @@ class AppState {
         `).join('');
     }
 
-    loadProducts(category) {
+    async loadProducts(category) {
         const productsGrid = document.getElementById('productsGrid');
         
-        if (!category.products) {
+        let productsList = category.products;
+
+        // If index-based category with url, lazy-load and cache
+        if (!productsList && category.url) {
+            const url = category.url;
+            if (this.categoryCache[url]) {
+                productsList = this.categoryCache[url];
+            } else {
+                try {
+                    const resp = await fetch(url, { cache: 'no-cache' });
+                    if (resp.ok) {
+                        const data = await resp.json();
+                        productsList = Array.isArray(data) ? data : (data.products || []);
+                        this.categoryCache[url] = productsList;
+                    }
+                } catch (e) {
+                    // ignore, fallback below
+                }
+            }
+        }
+
+        // Fallback: if productsList still empty but we have legacy full data, extract matching category
+        if (!productsList && this.products && this.products.branches && this.currentBranch) {
+            const branch = this.products.branches.find(b => b.name === this.currentBranch.name);
+            const cat = branch && branch.categories ? branch.categories.find(c => c.name === category.name) : null;
+            productsList = cat ? cat.products : null;
+        }
+
+        if (!productsList) {
             productsGrid.innerHTML = '<div class="empty-cart"><i class="fas fa-exclamation-triangle"></i><p>Нет доступных продуктов</p></div>';
             return;
         }
-        
-        productsGrid.innerHTML = category.products.map(product => {
+
+        productsGrid.innerHTML = productsList.map(product => {
             if (product.options && product.options.length > 1) {
                 // Product with multiple options - use checkboxes
                 return `

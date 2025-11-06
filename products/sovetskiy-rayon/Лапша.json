@@ -1,0 +1,10 @@
+{
+  "products": [
+    {"name":"Лапша с креветкой","image":"Лапша/DSC08977.webp","price":"380руб","description":"1 шт"},
+    {"name":"Лапша с морепродуктами","image":"Лапша/DSC09024.webp","price":"350руб","description":"1 шт"},
+    {"name":"Лапша с курицей","image":"Лапша/DSC09024.webp","price":"330руб","description":"1 шт"},
+    {"name":"Лапша со свининой","image":"Лапша/DSC09024.webp","price":"330руб","description":"1 шт"},
+    {"name":"Лапша с овощами","image":"Лапша/DSC09024.webp","price":"280руб","description":"1 шт"}
+  ]
+}
+
