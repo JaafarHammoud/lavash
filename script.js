@@ -914,6 +914,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Mobile menubar buttons
+    const mbBranches = document.getElementById('menubarBranchesBtn');
+    const mbCategories = document.getElementById('menubarCategoriesBtn');
+    const mbDelivery = document.getElementById('menubarDeliveryBtn');
+    if (mbBranches) {
+        mbBranches.addEventListener('click', () => {
+            // This will show confirmation if cart is not empty
+            appState.showBranchSelection();
+        });
+    }
+    if (mbCategories) {
+        mbCategories.addEventListener('click', () => {
+            if (appState.currentBranch) {
+                appState.showCategories(appState.currentBranch);
+            } else {
+                // No branch selected yet — go to branches without forcing clear
+                appState.showBranchSelection(true);
+            }
+        });
+    }
+    if (mbDelivery) {
+        mbDelivery.addEventListener('click', () => {
+            appState.showDeliveryPage();
+        });
+    }
+
     const backFromDeliveryBtn = document.getElementById('backFromDeliveryBtn');
     if (backFromDeliveryBtn) {
         backFromDeliveryBtn.addEventListener('click', () => {
