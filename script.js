@@ -637,6 +637,15 @@ class AppState {
 
     async loadProducts(category) {
         const productsGrid = document.getElementById('productsGrid');
+        // Clear previous category immediately and show skeletons to prevent stale images
+        const skeletonCard = () => `
+            <div class="product-card fade-in">
+                <div class="product-image" style="background: var(--surface-color);"></div>
+                <div class="product-info">
+                    <div class="loading"></div>
+                </div>
+            </div>`;
+        productsGrid.innerHTML = new Array(8).fill(0).map(skeletonCard).join('');
         
         let productsList = category.products;
 
