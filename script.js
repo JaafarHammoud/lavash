@@ -463,6 +463,8 @@ class AppState {
         document.getElementById('branchSelection').style.display = 'block';
         document.getElementById('categoriesSection').style.display = 'none';
         document.getElementById('productsSection').style.display = 'none';
+        const delivery = document.getElementById('deliverySection');
+        if (delivery) delivery.style.display = 'none';
     }
 
     showBranchSwitchConfirmation() {
@@ -543,6 +545,8 @@ class AppState {
         document.getElementById('branchSelection').style.display = 'none';
         document.getElementById('categoriesSection').style.display = 'block';
         document.getElementById('productsSection').style.display = 'none';
+        const delivery = document.getElementById('deliverySection');
+        if (delivery) delivery.style.display = 'none';
         
         document.getElementById('branchTitle').textContent = `Меню - ${branch.name}`;
         this.loadCategories(branch);
@@ -557,9 +561,20 @@ class AppState {
         
         document.getElementById('categoriesSection').style.display = 'none';
         document.getElementById('productsSection').style.display = 'block';
+        const delivery = document.getElementById('deliverySection');
+        if (delivery) delivery.style.display = 'none';
         
         document.getElementById('categoryTitle').textContent = category.name;
         this.loadProducts(category);
+    }
+
+    showDeliveryPage() {
+        this.currentCategory = null;
+        window.history.pushState('delivery', '', '#delivery');
+        document.getElementById('branchSelection').style.display = 'none';
+        document.getElementById('categoriesSection').style.display = 'none';
+        document.getElementById('productsSection').style.display = 'none';
+        document.getElementById('deliverySection').style.display = 'block';
     }
 
     // Data loading
@@ -890,6 +905,21 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('cartIcon').addEventListener('click', () => {
         openCart();
     });
+    // Delivery page navigation
+    const deliveryNav = document.getElementById('deliveryNav');
+    if (deliveryNav) {
+        deliveryNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            appState.showDeliveryPage();
+        });
+    }
+
+    const backFromDeliveryBtn = document.getElementById('backFromDeliveryBtn');
+    if (backFromDeliveryBtn) {
+        backFromDeliveryBtn.addEventListener('click', () => {
+            appState.showBranchSelection(true);
+        });
+    }
     
     document.getElementById('closeCart').addEventListener('click', () => {
         closeCart();
@@ -947,6 +977,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentSection && currentSection.id !== 'branchSelection') {
                 appState.showBranchSelection(true);
             }
+        } else if (state === 'delivery') {
+            appState.showDeliveryPage();
         } else if (state === 'categories' && appState.currentBranch) {
             if (currentSection && currentSection.id !== 'categoriesSection') {
                 appState.showCategories(appState.currentBranch);

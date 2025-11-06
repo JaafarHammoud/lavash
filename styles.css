@@ -113,6 +113,18 @@ body {
     gap: var(--spacing-lg);
 }
 
+.nav-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.nav-link:hover {
+    background-color: var(--surface-color);
+}
+
 .theme-toggle {
     background: none;
     border: none;
@@ -345,6 +357,73 @@ body {
 /* Products Section */
 .products-section {
     padding: var(--spacing-xxl) 0;
+}
+
+/* Delivery Page */
+.delivery-section {
+    padding: var(--spacing-xxl) 0;
+}
+
+.delivery-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--spacing-xxl);
+    margin-bottom: var(--spacing-xxl);
+}
+
+.delivery-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.delivery-card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.delivery-card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.steps h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.step {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.step-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 992px) {
+    .delivery-grid { grid-template-columns: 1fr; }
 }
 
 .products-grid {
@@ -1006,6 +1085,17 @@ body {
     .hero-img {
         height: 300px;
     }
+
+    /* Use hero as background on mobile */
+    .hero-image { display: none; }
+    .branch-selection {
+        background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('assets/general/hero.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .hero-section { margin-bottom: var(--spacing-xl); }
+    .hero-title, .hero-subtitle { color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.35); }
     
     .branches-grid {
         grid-template-columns: 1fr;

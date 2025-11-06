@@ -19,6 +19,7 @@
                     <span class="logo-text">Лаваш</span>
                 </div>
                 <nav class="nav">
+                    <a href="#delivery" id="deliveryNav" class="nav-link">Доставка и оплата</a>
                     <button class="theme-toggle" id="themeToggle">
                         <i class="fas fa-moon"></i>
                     </button>
@@ -45,6 +46,65 @@
             </div>
             <div class="branches-grid" id="branchesGrid">
                 <!-- Branches will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery and Payment Page -->
+    <section class="delivery-section" id="deliverySection" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <button class="back-btn" id="backFromDeliveryBtn">
+                    <i class="fas fa-arrow-left"></i>
+                    На главную
+                </button>
+                <h2 class="section-title">Доставка и оплата</h2>
+            </div>
+
+            <div class="delivery-grid">
+                <div class="delivery-cards">
+                    <div class="delivery-card">
+                        <h3>Доставка по городу</h3>
+                        <p>Верхняя часть от 2 000₽, Нижняя часть от 3 000₽</p>
+                    </div>
+                    <div class="delivery-card">
+                        <h3>Быстрая доставка</h3>
+                        <p>Среднее время доставки 60–90 минут</p>
+                    </div>
+                    <div class="delivery-card">
+                        <h3>Удобная оплата</h3>
+                        <p>Платите курьеру при получении заказа картой или наличными</p>
+                    </div>
+                    <div class="delivery-card">
+                        <h3>Удобные ланчбоксы</h3>
+                        <p>Доставляем в контейнерах, которые сохраняют тепло готовых блюд</p>
+                    </div>
+                </div>
+
+                <div class="delivery-map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A39cff3fd435f15af2455efef66ae31693ed1b32cd8c67673e3e40f9a5fc0d562&source=constructor" width="100%" height="400" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <div class="steps">
+                <h3>Заказать еду просто</h3>
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-num">01</div>
+                        <h4>Оформление заказа</h4>
+                        <p>Оформите заказ на сайте, добавив нужные позиции в корзину. Либо позвоните нам по телефону 424-09-95</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">02</div>
+                        <h4>Подтверждение заказа</h4>
+                        <p>В течение 15 минут после отправки заявки на сайте, мы свяжемся с вами для уточнения деталей заказа.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">03</div>
+                        <h4>Доставка и оплата товара</h4>
+                        <p>Привезем товары в течение одного часа или полутора. Вам останется оплатить заказ курьеру картой или наличными.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
