@@ -432,6 +432,9 @@ body {
     box-shadow: 0 10px 30px var(--shadow-color);
     transition: all var(--transition-normal);
     border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .product-card:hover {
@@ -450,16 +453,20 @@ body {
     padding: var(--spacing-md);
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
+    gap: 0;
+    flex: 1;
+    min-height: 0;
 }
 
 .product-controls {
-    margin-top: auto;
+    margin-top: 0;
+    margin-bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--spacing-md);
     width: 100%;
+    flex-shrink: 0;
 }
 
 .qty-controls {
@@ -479,7 +486,9 @@ body {
     justify-content: center;
     cursor: pointer;
     transition: all var(--transition-fast);
-    margin-top: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-shrink: 0;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     color: #fff;
     border: none;
@@ -493,28 +502,44 @@ body {
 .product-name {
     font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 0;
     color: var(--text-primary);
+    line-height: 1.4;
+    word-wrap: break-word;
+    flex-shrink: 0;
 }
 
 .product-description {
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-md);
+    margin-top: auto;
+    margin-bottom: var(--spacing-sm);
     font-size: 0.9rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    flex-shrink: 0;
+}
+
+/* If no description, push options/price down (directly after name) */
+.product-name + .product-options,
+.product-name + .product-price {
+    margin-top: auto;
 }
 
 .product-price {
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--primary-color);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    flex-shrink: 0;
 }
 
 .product-options {
-    margin-bottom: var(--spacing-md);
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
     display: flex;
     gap: var(--spacing-sm);
     flex-wrap: wrap;
+    flex-shrink: 0;
 }
 
 .option-button {
