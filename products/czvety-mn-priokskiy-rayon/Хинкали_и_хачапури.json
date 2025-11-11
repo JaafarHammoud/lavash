@@ -1,7 +1,7 @@
 {
   "products": [
     {"name":"Хинкали (говядина и свинина)","image":"hinkali_govyadina_svinina.jpg","price":"450руб","description":"5 шт"},
-    {"name":"Хинкали (баранина и говядина)","image":"hinkali_baranina_govyadina.jpg","price":"940руб","description":"5 шт"},
+    {"name":"Хинкали (баранина и говядина)","image":"hinkali_baranina_govyadina.jpg","price":"490руб","description":"5 шт"},
     {"name":"Квари (вареник с сулугуни)","image":"kvari_suluguni.jpg","price":"400руб","description":"4 шт"},
     {"name":"Хачапури по-аджарски","image":"khachapuri_po_adzharski.jpg","price":"480руб","description":"300 гр"},
     {"name":"Хачапури по-мегрельски","image":"khachapuri_po_megrelsky.jpg","price":"520руб","description":"550 гр"}
