@@ -7,7 +7,7 @@ class AppState {
         this.products = null; // legacy full data fallback
         this.productsIndex = null; // new lightweight index
         this.categoryCache = {}; // url -> products[]
-        this.theme = localStorage.getItem('theme') || 'light';
+        this.theme = 'dark';
         this.uiQuantities = {};
     }
 
@@ -56,30 +56,7 @@ class AppState {
 
     // Theme management
     initTheme() {
-        document.documentElement.setAttribute('data-theme', this.theme);
-        const themeToggle = document.getElementById('themeToggle');
-        const icon = themeToggle.querySelector('i');
-        
-        if (this.theme === 'dark') {
-            icon.className = 'fas fa-sun';
-        } else {
-            icon.className = 'fas fa-moon';
-        }
-    }
-
-    toggleTheme() {
-        this.theme = this.theme === 'light' ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', this.theme);
-        localStorage.setItem('theme', this.theme);
-        
-        const themeToggle = document.getElementById('themeToggle');
-        const icon = themeToggle.querySelector('i');
-        
-        if (this.theme === 'dark') {
-            icon.className = 'fas fa-sun';
-        } else {
-            icon.className = 'fas fa-moon';
-        }
+        document.documentElement.setAttribute('data-theme', 'dark');
     }
 
     // Cart management
@@ -926,10 +903,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 100);
     
     // Event listeners
-    document.getElementById('themeToggle').addEventListener('click', () => {
-        appState.toggleTheme();
-    });
-    
     document.getElementById('cartIcon').addEventListener('click', () => {
         openCart();
     });

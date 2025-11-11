@@ -1,20 +1,20 @@
-/* CSS Variables for Light/Dark Theme */
+/* CSS Variables for Dark Theme */
 :root {
-    /* Light Theme Colors */
+    /* Dark Theme Colors */
     --primary-color: #d4af37;
     --primary-dark: #b8941f;
     --secondary-color: #8b4513;
     --accent-color: #ff6b35;
-    --background-color: #ffffff;
-    --surface-color: #f8f9fa;
-    --card-color: #ffffff;
-    --text-primary: #2c3e50;
-    --text-secondary: #6c757d;
-    --text-muted: #adb5bd;
-    --border-color: #e9ecef;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --shadow-hover: rgba(0, 0, 0, 0.15);
-    --overlay-color: rgba(0, 0, 0, 0.5);
+    --background-color: #1a1a1a;
+    --surface-color: #2d2d2d;
+    --card-color: #3a3a3a;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-muted: #808080;
+    --border-color: #404040;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --shadow-hover: rgba(0, 0, 0, 0.4);
+    --overlay-color: rgba(0, 0, 0, 0.7);
     
     /* Spacing */
     --spacing-xs: 0.25rem;
@@ -34,20 +34,6 @@
     --transition-fast: 0.15s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
-}
-
-/* Dark Theme */
-[data-theme="dark"] {
-    --background-color: #1a1a1a;
-    --surface-color: #2d2d2d;
-    --card-color: #3a3a3a;
-    --text-primary: #ffffff;
-    --text-secondary: #b0b0b0;
-    --text-muted: #808080;
-    --border-color: #404040;
-    --shadow-color: rgba(0, 0, 0, 0.3);
-    --shadow-hover: rgba(0, 0, 0, 0.4);
-    --overlay-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Reset and Base Styles */
