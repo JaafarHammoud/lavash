@@ -1,7 +1,7 @@
 {
   "products": [
-    {"name":"Цезарь","image":"Салаты/DSC08975.webp","price":"250руб","description":"200 гр"},
-    {"name":"Оливье","image":"Салаты/DSC08974.webp","price":"220руб","description":"200 гр"},
+    {"name":"Цезарь","image":"Салаты/DSC08975.webp","price":"270руб","description":"200 гр"},
+    {"name":"Оливье","image":"Салаты/DSC08974.webp","price":"250руб","description":"200 гр"},
     {"name":"Салат Свекольный","image":"Салаты/DSC08972.webp","price":"200руб","description":"200 гр"},
     {"name":"Салат огурцы, помидоры","image":"Салаты/DSC09038.webp","price":"300руб","description":"300 гр"},
     {"name":"Морковь по-корейски","image":"Салаты/DSC08993.webp","price":"170руб","description":"200 гр"},

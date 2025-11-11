@@ -1,9 +1,9 @@
 {
   "products": [
-    {"name":"Бургер с говядиной","image":"Бургеры/DSC09012.webp","price":"370руб","description":"1 шт"},
-    {"name":"Бургер с говядиной и свининой","image":"Бургеры/DSC09012.webp","price":"350руб","description":"1 шт"},
-    {"name":"Бургер с курицей","image":"Бургеры/DSC09012.webp","price":"320руб","description":"1 шт"},
-    {"name":"Хот дог","image":"Бургеры/DSC09010.webp","price":"120руб","description":"1 шт"},
+    {"name":"Бургер с говядиной","image":"Бургеры/DSC09012.webp","price":"380руб","description":"1 шт"},
+    {"name":"Бургер с говядиной и свининой","image":"Бургеры/DSC09012.webp","price":"360руб","description":"1 шт"},
+    {"name":"Бургер с курицей","image":"Бургеры/DSC09012.webp","price":"330руб","description":"1 шт"},
+    {"name":"Хот дог","image":"Бургеры/DSC09010.webp","price":"130руб","description":"1 шт"},
     {"name":"Самса Баранина","image":"Бургеры/DSC09008.webp","price":"140руб","description":"1 шт"},
     {"name":"Самса Курица","image":"Бургеры/DSC09008.webp","price":"120руб","description":"1 шт"},
     {"name":"Самса Говядина","image":"Бургеры/DSC09008.webp","price":"130руб","description":"1 шт"}

@@ -1,9 +1,9 @@
 {
   "products": [
-    {"name":"Сувлаки Люля-кебаб","image":"Сувлаки/DSC09030.webp","price":"330руб","description":"1 шт"},
-    {"name":"Сувлаки Люля-кебаб из баранины","image":"Сувлаки/DSC09030.webp","price":"400руб","description":"1 шт"},
-    {"name":"Сувлаки Свинина","image":"Сувлаки/DSC09030.webp","price":"300руб","description":"1 шт"},
-    {"name":"Сувлаки Курица","image":"Сувлаки/DSC09030.webp","price":"300руб","description":"1 шт"}
+    {"name":"Сувлаки Люля-кебаб","image":"Сувлаки/DSC09030.webp","price":"350руб","description":"1 шт"},
+    {"name":"Сувлаки Люля-кебаб из баранины","image":"Сувлаки/DSC09030.webp","price":"420руб","description":"1 шт"},
+    {"name":"Сувлаки Свинина","image":"Сувлаки/DSC09030.webp","price":"320руб","description":"1 шт"},
+    {"name":"Сувлаки Курица","image":"Сувлаки/DSC09030.webp","price":"320руб","description":"1 шт"}
   ]
 }
 

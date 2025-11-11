@@ -1,13 +1,13 @@
 {
   "products": [
-    {"name":"Солянка","image":"Супы/DSC08985.webp","price":"300руб","description":"1 шт"},
-    {"name":"Лагман","image":"Супы/DSC08983.webp","price":"300руб","description":"1 шт"},
-    {"name":"Борщ","image":"Супы/DSC08987.webp","price":"300руб","description":"1 шт"},
-    {"name":"Окрошка","image":"okroshka.jpg","price":"300руб","description":"1 шт"},
-    {"name":"Гороховый","image":"Супы/DSC08989.webp","price":"300руб","description":"1 шт"},
-    {"name":"Пельмени (15 шт)","image":"Супы/DSC08992.webp","price":"300руб","description":"1 шт"},
-    {"name":"Харчо","image":"Супы/DSC08980.webp","price":"300руб","description":"1 шт"},
-    {"name":"Шурпа","image":"Супы/DSC08983.webp","price":"320руб","description":"1 шт"}
+    {"name":"Солянка","image":"Супы/DSC08985.webp","price":"330руб","description":"1 шт"},
+    {"name":"Лагман","image":"Супы/DSC08983.webp","price":"330руб","description":"1 шт"},
+    {"name":"Борщ","image":"Супы/DSC08987.webp","price":"330руб","description":"1 шт"},
+    {"name":"Окрошка","image":"okroshka.jpg","price":"330руб","description":"1 шт"},
+    {"name":"Гороховый","image":"Супы/DSC08989.webp","price":"330руб","description":"1 шт"},
+    {"name":"Пельмени (15 шт)","image":"Супы/DSC08992.webp","price":"330руб","description":"1 шт"},
+    {"name":"Харчо","image":"Супы/DSC08980.webp","price":"330руб","description":"1 шт"},
+    {"name":"Шурпа","image":"Супы/DSC08983.webp","price":"350руб","description":"1 шт"}
   ]
 }
 

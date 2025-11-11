@@ -1,21 +1,21 @@
 {
   "products": [
-    {"name":"Шаурма со свининой","image":"Шаурма/DSC09005.webp","price":"280руб","description":"1 шт"},
-    {"name":"Донар со свининой","image":"Шаурма/DSC08998.webp","price":"290руб","description":"1 шт"},
-    {"name":"Шаурма с курицей","image":"Шаурма/DSC09005.webp","price":"280руб","description":"1 шт"},
-    {"name":"Донар с курицей","image":"Шаурма/DSC08998.webp","price":"290руб","description":"1 шт"},
-    {"name":"Шаурма с люля-кебаб","image":"Шаурма/DSC09016.webp","price":"310руб","description":"1 шт"},
-    {"name":"Донар с люля-кебаб","image":"Шаурма/DSC08998.webp","price":"320руб","description":"1 шт"},
-    {"name":"Шаурма с люля-кебаб из баранины","image":"Шаурма/DSC09016.webp","price":"380руб","description":"1 шт"},
-    {"name":"Донар с люля-кебаб из баранины","image":"Шаурма/DSC08998.webp","price":"390руб","description":"1 шт"},
-    {"name":"Шаурма с грибами","image":"Шаурма/DSC09005.webp","price":"280руб","description":"1 шт"},
-    {"name":"Донар с грибами","image":"Шаурма/DSC08998.webp","price":"290руб","description":"1 шт"},
-    {"name":"Шаурма Цезарь","image":"Шаурма/DSC09005.webp","price":"300руб","description":"1 шт"},
-    {"name":"Донар Цезарь","image":"Шаурма/DSC08998.webp","price":"310руб","description":"1 шт"},
-    {"name":"Шаурма Жульен","image":"Шаурма/DSC09005.webp","price":"320руб","description":"1 шт"},
-    {"name":"Донар Жульен","image":"Шаурма/DSC08998.webp","price":"330руб","description":"1 шт"},
-    {"name":"Шаурма с овощами","image":"Шаурма/DSC09005.webp","price":"210руб","description":"1 шт"},
-    {"name":"Донар с овощами","image":"Шаурма/DSC08998.webp","price":"220руб","description":"1 шт"}
+    {"name":"Шаурма со свининой","image":"Шаурма/DSC09005.webp","price":"300руб","description":"1 шт"},
+    {"name":"Донар со свининой","image":"Шаурма/DSC08998.webp","price":"310руб","description":"1 шт"},
+    {"name":"Шаурма с курицей","image":"Шаурма/DSC09005.webp","price":"300руб","description":"1 шт"},
+    {"name":"Донар с курицей","image":"Шаурма/DSC08998.webp","price":"310руб","description":"1 шт"},
+    {"name":"Шаурма с люля-кебаб","image":"Шаурма/DSC09016.webp","price":"330руб","description":"1 шт"},
+    {"name":"Донар с люля-кебаб","image":"Шаурма/DSC08998.webp","price":"340руб","description":"1 шт"},
+    {"name":"Шаурма с люля-кебаб из баранины","image":"Шаурма/DSC09016.webp","price":"400руб","description":"1 шт"},
+    {"name":"Донар с люля-кебаб из баранины","image":"Шаурма/DSC08998.webp","price":"410руб","description":"1 шт"},
+    {"name":"Шаурма с грибами","image":"Шаурма/DSC09005.webp","price":"300руб","description":"1 шт"},
+    {"name":"Донар с грибами","image":"Шаурма/DSC08998.webp","price":"310руб","description":"1 шт"},
+    {"name":"Шаурма Цезарь","image":"Шаурма/DSC09005.webp","price":"320руб","description":"1 шт"},
+    {"name":"Донар Цезарь","image":"Шаурма/DSC08998.webp","price":"330руб","description":"1 шт"},
+    {"name":"Шаурма Жульен","image":"Шаурма/DSC09005.webp","price":"340руб","description":"1 шт"},
+    {"name":"Донар Жульен","image":"Шаурма/DSC08998.webp","price":"350руб","description":"1 шт"},
+    {"name":"Шаурма с овощами","image":"Шаурма/DSC09005.webp","price":"250руб","description":"1 шт"},
+    {"name":"Донар с овощами","image":"Шаурма/DSC08998.webp","price":"260руб","description":"1 шт"}
   ]
 }
 
