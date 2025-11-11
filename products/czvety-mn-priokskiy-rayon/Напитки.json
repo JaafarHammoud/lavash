@@ -1,18 +1,18 @@
 {
   "products": [
-    {"name":"Морс","image":"Напитки/DSC09078.webp","price":"140руб","description":"500 мл"},
-    {"name":"Бардзими","image":"Напитки/DSC09067.webp","price":"140руб","description":"500 мл"},
-    {"name":"Аква Кристалл","image":"Напитки/DSC09066.webp","price":"140руб","description":"500 мл"},
-    {"name":"Кока Кола в стекле","image":"Напитки/DSC09072.webp","price":"140руб","description":"0,33 л"},
-    {"name":"Фанта в стекле","image":"Напитки/","price":"140руб","description":"0,33 л"},
+    {"name":"Морс","image":"Напитки/DSC09078.webp","price":"140руб","description":"0.5 л"},
+    {"name":"Бардзими","image":"Напитки/DSC09067.webp","price":"140руб","description":"0.5 л"},
+    {"name":"Аква Кристалл","image":"Напитки/DSC09066.webp","price":"140руб","description":"0.5 л"},
+    {"name":"Кока Кола в стекле","image":"Напитки/DSC09072.webp","price":"140руб","description":"0.33 л"},
+    {"name":"Фанта в стекле","image":"Напитки/","price":"140руб","description":"0.33 л"},
     {"name":"Спрайт","image":"Напитки/","price":"120руб","description":"0.33 л"},
     {"name":"Фанта","image":"Напитки/","price":"120руб","description":"0.33 л"},
     {"name":"Кока Кола","image":"Напитки/","price":"120руб","description":"0.33 л"},
     {"name":"Палпи","image":"Напитки/","price":"140руб","description":"0.5 л"},
     {"name":"Фанта","image":"Напитки/","price":"140руб","description":"0.5 л"},
-    {"name":"Кока Кола","image":"Напитки/DSC09074.webp","price":"140руб","description":"0,5 л"},
+    {"name":"Кока Кола","image":"Напитки/DSC09074.webp","price":"140руб","description":"0.5 л"},
     {"name":"Кока Кола","image":"Напитки/DSC09071.webp","price":"200руб","description":"1 л"},
-    {"name":"Jermuk","image":"Напитки/DSC09075.webp","price":"120руб","description":"500 мл"},
+    {"name":"Jermuk","image":"Напитки/DSC09075.webp","price":"120руб","description":"0.5 л"},
     {"name":"Сок Добрый","image":"Напитки/DSC09069.webp","price":"200руб","description":"1 л"}
   ]
 }

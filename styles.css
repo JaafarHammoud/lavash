@@ -1121,7 +1121,7 @@ body {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        filter: blur(6px);
+        filter: blur(1px);
         z-index: -1;
     }
     
