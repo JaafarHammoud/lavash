@@ -6,7 +6,8 @@
     {"name":"Харчо","image":"Супы/DSC08980.webp","price":"330руб","description":"1 шт"},
     {"name":"Шурпа","image":"Супы/DSC08983.webp","price":"350руб","description":"1 шт"},
     {"name":"Пельмени (15 шт)","image":"Супы/DSC08992.webp","price":"330руб","description":"1 шт"},
-    {"name":"Гороховый (сезонный)","image":"Супы/DSC08989.webp","price":"330руб","description":"1 шт"}
+    {"name":"Гороховый (сезонный)","image":"Супы/DSC08989.webp","price":"330руб","description":"1 шт"},
+    {"name":"Плов","image":"Супы/","price":"350руб","description":"350 гр"}
   ]
 }
 

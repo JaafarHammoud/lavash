@@ -1,11 +1,11 @@
 {
   "products": [
-    {"name":"Стейк сёмги","image":"Рыба_на_мангале/DSC08948.webp","options":[{"name":"200 гр","price":"720руб"},{"name":"1 кг","price":"3600руб"}],"description":"200 гр"},
-    {"name":"Осетрина на мангале","image":"Рыба_на_мангале/DSC00003.webp","options":[{"name":"200 гр","price":"1200руб"},{"name":"1 кг","price":"6000руб"}],"description":"200 гр"},
-    {"name":"Форель радужная (500–600 гр)","image":"Рыба_на_мангале/DSC08944.webp","options":[{"name":"200 гр","price":"1200руб"},{"name":"1 кг","price":"6000руб"}],"description":"200 гр"},
-    {"name":"Сибас (250–300 гр)","image":"Рыба_на_мангале/DSC08951.webp","price":"250руб","description":"100 гр"},
-    {"name":"Дорадо (300–400 гр)","image":"Рыба_на_мангале/DSC00005.webp","price":"250руб","description":"100 гр"},
-    {"name":"Стейк зубатки (250–300 гр)","image":"Рыба_на_мангале/DSC00004.webp","price":"180руб","description":"100 гр"}
+    {"name":"Стейк зубатки","image":"Рыба_на_мангале/DSC00004.webp","options":[{"name":"300 гр","price":"600руб"},{"name":"1 кг","price":"2000руб"}],"description":"300 гр"},
+    {"name":"Стейк сёмги","image":"Рыба_на_мангале/DSC08948.webp","options":[{"name":"300 гр","price":"1110руб"},{"name":"1 кг","price":"3700руб"}],"description":"300 гр"},
+    {"name":"Стейк осетрины","image":"Рыба_на_мангале/DSC00003.webp","options":[{"name":"300 гр","price":"1800руб"},{"name":"1 кг","price":"6000руб"}],"description":"300 гр"},
+    {"name":"Форель радужная","image":"Рыба_на_мангале/DSC08944.webp","options":[{"name":"400 гр","price":"1080руб"},{"name":"1 кг","price":"2700руб"}],"description":"400 гр"},
+    {"name":"Сибас","image":"Рыба_на_мангале/DSC08951.webp","options":[{"name":"400 гр","price":"1080руб"},{"name":"1 кг","price":"2700руб"}],"description":"400 гр"},
+    {"name":"Дорадо","image":"Рыба_на_мангале/DSC00005.webp","options":[{"name":"400 гр","price":"1080руб"},{"name":"1 кг","price":"2700руб"}],"description":"400 гр"}
   ]
 }
 
