@@ -1106,10 +1106,28 @@ body {
     /* Use hero as background on mobile */
     .hero-image { display: none; }
     .branch-selection {
-        background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('assets/general/hero.jpg');
+        position: relative;
+        background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25));
+    }
+    
+    .branch-selection::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('assets/general/hero.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        filter: blur(6px);
+        z-index: -1;
+    }
+    
+    .branch-selection .container {
+        position: relative;
+        z-index: 1;
     }
     .hero-section { margin-bottom: var(--spacing-xl); }
     .hero-subtitle { color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.35); }
